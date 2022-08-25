@@ -1,0 +1,24 @@
+// fonts
+$primary-font: 'Exo 2', sans-serif;
+$secondary-font: 'Raleway', sans-serif;
+
+
+//colors
+$colors: (
+  'black': #0E1012,
+  'white': #FFFFFF,
+  'background': #EFF3F5,
+  'gray-border': #E1E4E8,
+  'gray-icon': #C2C6CB,
+  'gray-input': #8A8E97,
+  'gray-body': #595E66,
+  'gray-header': #24272C,
+  'yellow': #FFF326,
+  'yellow-bg': #FFFEF4,
+  'red': #EB5757,
+  'green': #14B859,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

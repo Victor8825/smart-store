@@ -1,0 +1,18 @@
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: calc($lh / $fs);
+  letter-spacing: $ls;
+}
+
+@mixin mob {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+ @mixin desk {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }

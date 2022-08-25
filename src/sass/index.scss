@@ -1,2 +1,7 @@
-@import './common';
-@import './example';
+@import './utils/vars';
+@import './utils/reset';
+@import './utils/modern-normalize';
+@import './utils/mixins';
+
+@import './layout/header';
+
