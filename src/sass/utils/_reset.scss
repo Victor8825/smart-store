@@ -1,8 +1,10 @@
 // Основной шрифт и цвет
 
 body {
-  font-family: $primary-font;
-  // color: getColor('gray-header');
+  font-family: $primaryFont;
+  font-size: 16px;
+  font-weight: 500;
+  color: getColor('black');
   background-color: getColor('background');
 }
 
@@ -18,7 +20,7 @@ p {
   margin: 0;
   padding: 0;
 }
-
+ 
 // сброс стиля у ссылки
 a {
   color: inherit;

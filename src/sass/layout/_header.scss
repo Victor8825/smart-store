@@ -1,3 +1,96 @@
-.burger {
-  fill: red;  
+.header {
+  padding: 8px 16px;
+  border-bottom: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include desk {
+    padding: 8px 84px;
+    border-top: 1px solid;
+    margin-top: 24px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // @include desk {
+  //   // position: relative;
+  //   justify-content: center;
+  // }
+}
+
+.menu-left {
+  display: none;
+
+  @include desk {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+.menu-left li:last-child {
+  color: #0e101240;
+}
+
+.menu-right {
+  display: none;
+
+  @include desk {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  margin-right: auto;
+
+  @include desk {
+    width: 68px;
+    height: 68px;
+    margin-left: auto;
+  }
+}
+
+.button-search {
+  width: 44px;
+  height: 44px;
+  @include desk {
+    width: 32px;
+    height: 32px;
+    // position: absolute;
+    // left: 142px;
+  }
+}
+
+.button-burger {
+  width: 44px;
+  height: 44px;
+  margin-right: 100px;
+  @include desk {
+    display: none;
+  }
+}
+
+.button-user {
+  width: 44px;
+  height: 44px;
+  @include desk {
+    display: none;
+  }
+}
+
+.icon-search {
+  @include desk {
+    width: 24px;
+    height: 24px;
+  }
 }
