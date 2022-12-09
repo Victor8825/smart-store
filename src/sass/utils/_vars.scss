@@ -7,26 +7,20 @@ $minWidth: 375px;
 $maxWidth: 1440px;
 $responsiveType: 2;
 
-
-
-
-
-
-
 //colors
 $colors: (
-  'black': #0E1012,
-  'white': #FFFFFF,
-  'background': #EFF3F5,
-  'gray-border': #E1E4E8,
-  'gray-icon': #C2C6CB,
-  'gray-input': #8A8E97,
-  'gray-body': #595E66,
-  'gray-header': #24272C,
-  'yellow': #FFF326,
-  'yellow-bg': #FFFEF4,
-  'red': #EB5757,
-  'green': #14B859,
+  'black': #0e1012,
+  'white': #ffffff,
+  'background': #eff3f5,
+  'gray-border': #e1e4e8,
+  'gray-icon': #c2c6cb,
+  'gray-input': #8a8e97,
+  'gray-body': #595e66,
+  'gray-header': #24272c,
+  'yellow': #fff326,
+  'yellow-bg': #fffef4,
+  'red': #eb5757,
+  'green': #14b859,
 );
 
 @function getColor($key) {

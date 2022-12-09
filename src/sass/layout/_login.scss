@@ -1,0 +1,313 @@
+.auth {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include desk {
+    padding: 0px;
+    position: relative;
+    height: 780px;
+  }
+}
+
+.background-wrapper {
+  @include desk {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    width: 818px;
+    height: 780px;
+    background-image: url('../images/images/login-background-1x.jpg');
+    background-size: cover;
+
+    @include retina {
+      background-image: url('../images/images/login-background-2x.jpg');
+    }
+  }
+}
+
+.auth__text {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+
+  @include desk {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-left: 72px;
+    justify-content: center;
+  }
+}
+
+.auth__text-main {
+  @include font(400, 16px, 24px, null);
+
+  @include desk {
+    @include font(400, 14px, 20px, null);
+  }
+}
+
+.arrow-left {
+  margin-right: 4px;
+  @include desk {
+    display: none;
+  }
+}
+
+.arrow-right {
+  display: none;
+  @include desk {
+    display: block;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+.auth__text-login {
+  display: none;
+
+  @include desk {
+    @include font(400, 14px, 20px, null);
+    display: block;
+    color: getColor('gray-body');
+  }
+}
+
+.auth-wrapper {
+  @include desk {
+    width: 856px;
+    height: 500px;
+    display: flex;
+    border: 1px solid #0e1012;
+    margin-left: 72px;
+  }
+}
+
+.auth-wrapper__login {
+  padding: 40px 16px;
+  background-color: getColor('yellow-bg');
+
+  @include desk {
+    width: 428px;
+    padding: 40px;
+    border-right: 1px solid #0e1012;
+  }
+}
+
+.login-form {
+  input {
+    min-width: 343px;
+    height: 48px;
+    padding: 12px 24px;
+    border: 1px solid #0e1012;
+
+    @include desk {
+      min-width: 348px;
+    }
+  }
+
+  input:nth-child(odd) {
+    padding: 12px 24px;
+  }
+
+  input:nth-child(even) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+}
+
+.login-form__btn {
+  min-width: 343px;
+  height: 48px;
+  padding: 0px;
+  // margin-top: 32px;
+  background-color: getColor('gray-body');
+  color: getColor('white');
+  @include font(500, 16px, 16px, null);
+  opacity: 0.5;
+  border: 1px solid #0e1012;
+
+  @include desk {
+    min-width: 348px;
+  }
+}
+
+.login-form__heading {
+  text-align: center;
+  @include font(700, 28px, 36px, null);
+
+  @include desk {
+    @include font(700, 32px, 40px, null);
+  }
+}
+
+.login-form__heading {
+  margin-left: inherit;
+  margin-right: auto;
+}
+
+// .login-form__email:valid {
+//   border-color: getColor('green');
+// }
+
+.login-form__password-thumb {
+  position: relative;
+}
+
+.login-form__password-thumb > .eye-open {
+  position: absolute;
+  top: 12px;
+  left: 295px;
+}
+
+.login-form__paragraph-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px 0px;
+
+  &::before {
+    margin-right: 8px;
+  }
+
+  &::after {
+    margin-left: 8px;
+  }
+}
+
+.login-form__paragraph-text::before,
+.login-form__paragraph-text::after {
+  content: '';
+  flex: 1 1;
+  border-bottom: 1px solid #c2c6cb;
+}
+
+.login-form__password-error {
+  color: getColor('red');
+  font-family: $secondaryFont;
+  @include font(400, 12px, 20px, null);
+
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.login-form__password-error--visible {
+  visibility: visible;
+}
+
+.login-form__password-error--invisible {
+  visibility: hidden;
+}
+
+.auth-options {
+  text-align: center;
+  line-height: 1;
+
+  @include desk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__item:last-child {
+    @include desk {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.auth-options__item {
+  min-width: 343px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > svg {
+    margin-right: 12px;
+  }
+
+  @include desk {
+    min-width: 170px;
+    flex: 0 1 auto;
+  }
+}
+
+.auth-options__item:nth-child(even) {
+  margin-top: 16px;
+  margin-bottom: 8px;
+
+  @include desk {
+    margin-top: 0px;
+  }
+}
+
+.auth-options__item:not(:last-child) {
+  border: 1px solid #e1e4e8;
+}
+
+.auth-wrapper__newbee {
+  text-align: center;
+  padding: 40px 16px;
+
+  & .newbee-header {
+    margin-bottom: 24px;
+    @include desk {
+      margin-bottom: 40px;
+    }
+  }
+
+  & .newbee-text_first {
+    margin-bottom: 16px;
+
+    @include desk {
+      margin-bottom: 24px;
+    }
+  }
+
+  & .newbee-text_second {
+    margin-bottom: 32px;
+  }
+
+  @include desk {
+    width: 428px;
+    padding: 40px 40px 180px;
+    background-color: getColor('white');
+    border-right: 1px solid #0e1012;
+  }
+}
+
+.newbee-header {
+  @include font(700, 28px, 36px, null);
+
+  @include desk {
+    @include font(700, 32px, 40px, null);
+  }
+}
+
+.newbee-text_first {
+  color: getColor('gray-body');
+  @include font(700, 16px, 24px, null);
+}
+
+.newbee-text_second {
+  font-family: $secondaryFont;
+  @include font(400, 16px, 24px, null);
+}
+
+.newbee-link {
+  width: 348px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0e1012;
+
+  @include font(500, 16px, 24px, null);
+
+  @include desk {
+    @include font(500, 16px, 16px, null);
+  }
+}

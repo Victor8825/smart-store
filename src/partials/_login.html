@@ -1,0 +1,90 @@
+<section class="auth container">
+  <div class="background-wrapper"></div>
+  <div class="auth__text">
+    <svg class="arrow-left" width="24" height="24">
+      <use
+        href="./images/icons/symbol-defs-optimized.svg#icon-arrow-left"
+      ></use>
+    </svg>
+    <p class="auth__text-main">Головна</p>
+    <svg class="arrow-right" width="16" height="16">
+      <use
+        href="./images/icons/symbol-defs-optimized.svg#icon-arrow-right"
+      ></use>
+    </svg>
+    <p class="auth__text-login">Увійти</p>
+  </div>
+  <div class="auth-wrapper">
+    <div class="auth-wrapper__login">
+      <form name="login_form" novalidate class="login-form">
+        <h3 class="login-form__heading">Увійти</h3>
+
+        <input
+          class="login-form__email"
+          type="email"
+          name="email"
+          placeholder="Пошта"
+          aria-label="login form email"
+          autocomplete="on"
+          autofocus
+          required
+        />
+        <div class="login-form__password-thumb">
+          <input
+            class="login-form__password"
+            type="password"
+            name="password"
+            aria-label="login form password"
+            placeholder="Пароль"
+            autocomplete="on"
+            minlength="8"
+            maxlength="12"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+            title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
+            required
+          />
+          <svg class="eye-open" width="24" height="24">
+            <use
+              href="./images/icons/symbol-defs-optimized.svg#icon-eye-open"
+            ></use>
+          </svg>
+        </div>
+        <p
+          class="login-form__password-error login-form__password-error--visible"
+        >
+          Не менше 8 символів
+        </p>
+        <button type="submit" class="btn login-form__btn">Увійти</button>
+      </form>
+      <p class="login-form__paragraph-text">або</p>
+      <ul class="auth-options">
+        <li class="auth-options__item">
+          <svg class="icon-google" width="16" height="16">
+            <use
+              href="./images/icons/symbol-defs-optimized.svg#icon-google"
+            ></use>
+          </svg>
+          <a href="#">Увійти з Google</a>
+        </li>
+        <li class="auth-options__item">
+          <svg class="icon-apple" width="16" height="16">
+            <use
+              href="./images/icons/symbol-defs-optimized.svg#icon-apple"
+            ></use>
+          </svg>
+          <a href="#">Увійти з Apple</a>
+        </li>
+        <li class="auth-options__item"><a href="#"></a>Забули пароль</li>
+      </ul>
+    </div>
+    <div class="auth-wrapper__newbee">
+      <h3 class="newbee-header">Новий клієнт?</h3>
+      <p class="newbee-text_first">Створуйте акаунт щоб:</p>
+      <p class="newbee-text_second">
+        Приєднуйтеся до спільноти, відстежуйте статус вашого замовлення, та
+        переглядайте історії покупок
+      </p>
+      <a href="#" class="newbee-link">Створити аккаунт</a>
+    </div>
+  </div>
+</section>
