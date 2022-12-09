@@ -189,14 +189,12 @@
 
   margin-top: 4px;
   margin-bottom: 8px;
+  
+  visibility: hidden;
 }
 
 .login-form__password-error--visible {
   visibility: visible;
-}
-
-.login-form__password-error--invisible {
-  visibility: hidden;
 }
 
 .auth-options {
