@@ -120,8 +120,7 @@
   min-width: 343px;
   height: 48px;
   padding: 0px;
-  // margin-top: 32px;
-  background-color: getColor('gray-body');
+  background-color: getColor('black');
   color: getColor('white');
   @include font(500, 16px, 16px, null);
   opacity: 0.5;
@@ -130,6 +129,10 @@
   @include desk {
     min-width: 348px;
   }
+}
+
+.login-form__btn--success {
+  opacity: 1;
 }
 
 .login-form__heading {
@@ -146,9 +149,13 @@
   margin-right: auto;
 }
 
-// .login-form__email:valid {
-//   border-color: getColor('green');
-// }
+.login-form__email--success {
+  border-color: getColor('green');
+}
+
+.login-form__email--failure {
+  border-color: getColor('red');
+}
 
 .login-form__password-thumb {
   position: relative;
@@ -209,18 +216,12 @@
     justify-content: space-between;
     align-items: baseline;
   }
-
-  &__item:last-child {
-    @include desk {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 }
 
 .auth-options__item {
   min-width: 343px;
   height: 48px;
+  border: 1px solid #e1e4e8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,23 +230,36 @@
     margin-right: 12px;
   }
 
+  &:first-child {
+    margin-bottom: 16px;
+
+    @include desk {
+      margin-bottom: 0px;
+    }
+  }
+
   @include desk {
     min-width: 170px;
     flex: 0 1 auto;
   }
 }
 
-.auth-options__item:nth-child(even) {
-  margin-top: 16px;
-  margin-bottom: 8px;
+// .auth-options__item:nth-child(even) {
+//   margin-top: 16px;
+//   margin-bottom: 8px;
 
-  @include desk {
-    margin-top: 0px;
-  }
-}
+//   @include desk {
+//     margin-top: 0px;
+//   }
+// }
 
-.auth-options__item:not(:last-child) {
-  border: 1px solid #e1e4e8;
+.auth__forget-password-btn {
+  @include font(500, 16px, 16px, null);
+  margin: 8px auto 0px;
+  padding: 10px 16px;
+
+  // display: block;
+  // text-align: center;
 }
 
 .auth-wrapper__newbee {
