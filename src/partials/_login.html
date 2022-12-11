@@ -16,11 +16,11 @@
   </div>
   <div class="auth-wrapper">
     <div class="auth-wrapper__login">
-      <form name="login_form" novalidate class="login-form">
+      <form name="login_form" novalidate class="login-form" method="post">
         <h3 class="login-form__heading">Увійти</h3>
 
         <input
-          class="login-form__phone"
+          class="login-form__phone _tel _req"
           type="phone"
           name="phone"
           placeholder="Телефон"
@@ -31,14 +31,13 @@
         />
         <div class="login-form__password-thumb">
           <input
-            class="login-form__password"
+            class="login-form__password _req"
             type="password"
             name="password"
             aria-label="login form password"
             placeholder="Пароль"
             autocomplete="on"
             minlength="8"
-            maxlength="12"
             pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
             title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
             required
@@ -49,11 +48,7 @@
             ></use>
           </svg>
         </div>
-        <p
-          class="login-form__password-error login-form__password-error--visible"
-        >
-          Не менше 8 символів
-        </p>
+        <p class="login-form__password-error">Не менше 6 символів</p>
         <button type="submit" class="btn login-form__btn">Увійти</button>
       </form>
       <p class="login-form__paragraph-text">або</p>
