@@ -13,7 +13,7 @@ loginFormInputIcon.addEventListener('mouseup', () => {
 });
 
 
-function loginFormCheckInput() {
+function loginFormCheckInput(e) {
   if (loginFormPhoneInputRef.value.length == 15 && loginFormPasswordInputRef.value.length >= 6) {
     // enable submit button
     loginFormSubmitRef.disabled = false;
@@ -23,7 +23,7 @@ function loginFormCheckInput() {
     loginFormSubmitRef.disabled = true;
     loginFormSubmitRef.classList.remove('login-form__btn--success');
   }
-  if (loginFormPasswordInputRef.value.length < 6) {
+  if (loginFormPasswordInputRef.value.length < 6 && e.target.name == "password") {
     loginFormErrorRef.classList.add('login-form__password-error--visible')
   } else {
     loginFormErrorRef.classList.remove('login-form__password-error--visible')
