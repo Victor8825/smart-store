@@ -17,9 +17,11 @@ function loginFormCheckInput() {
   if (loginFormPhoneInputRef.value.length == 15 && loginFormPasswordInputRef.value.length >= 6) {
     // enable submit button
     loginFormSubmitRef.disabled = false;
+    loginFormSubmitRef.classList.add('login-form__btn--success');
   } else {
     //disable submit button
     loginFormSubmitRef.disabled = true;
+    loginFormSubmitRef.classList.remove('login-form__btn--success');
   }
   if (loginFormPasswordInputRef.value.length < 6) {
     loginFormErrorRef.classList.add('login-form__password-error--visible')
