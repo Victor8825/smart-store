@@ -221,8 +221,8 @@
 }
 
 .auth-options__item {
-  min-width: 343px;
-  height: 48px;
+//   min-width: 347px;
+  height: 40px;
   border: 1px solid #e1e4e8;
   display: flex;
   justify-content: center;
@@ -234,14 +234,15 @@
 
   &:first-child {
     margin-bottom: 16px;
+    border: none;
 
-    @include desk {
-      margin-bottom: 0px;
-    }
+//     @include desk {
+//       margin-bottom: 0px;
+//     }
   }
 
   @include desk {
-    min-width: 170px;
+    min-width: 347px;
     flex: 0 1 auto;
   }
 }
