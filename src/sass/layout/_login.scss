@@ -76,7 +76,7 @@
 .auth-wrapper {
   @include desk {
     width: 856px;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     border: 1px solid #0e1012;
     margin-left: 72px;
