@@ -23,6 +23,15 @@ function loginFormCheckInput(e) {
     loginFormSubmitRef.disabled = true;
     loginFormSubmitRef.classList.remove('login-form__btn--success');
   }
+  // check phone field
+  if (loginFormPhoneInputRef.value.length == 15) {
+    loginFormPhoneInputRef.classList.add('login-form__phone--success');
+    loginFormPhoneInputRef.classList.remove('login-form__phone--failure');
+  } else {
+    loginFormPhoneInputRef.classList.remove('login-form__phone--failure');
+    loginFormPhoneInputRef.classList.remove('login-form__phone--success');
+  }
+  // check password field
   if (loginFormPasswordInputRef.value.length < 6 && e.target.name == "password") {
     loginFormErrorRef.classList.add('login-form__password-error--visible')
   } else {
@@ -30,5 +39,15 @@ function loginFormCheckInput(e) {
   }
 }
 
+function loginFormPhoneEvent() {
+  if (loginFormPhoneInputRef.value.length > 4 && loginFormPhoneInputRef.value.length < 15) {
+    loginFormPhoneInputRef.classList.add('login-form__phone--failure');
+  }
+  if (loginFormPhoneInputRef.value == '380(' || loginFormPhoneInputRef.value == '') {
+    loginFormPhoneInputRef.classList.remove('login-form__phone--failure');
+  }
+}
+
 loginFormPhoneInputRef.addEventListener('input', loginFormCheckInput);
+loginFormPhoneInputRef.addEventListener('blur', loginFormPhoneEvent);
 loginFormPasswordInputRef.addEventListener('input', loginFormCheckInput)
