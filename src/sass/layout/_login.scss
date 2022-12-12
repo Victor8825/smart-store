@@ -16,11 +16,11 @@
     right: 0px;
     width: 818px;
     height: 780px;
-    background-image: url('../images/images/login-background-1x.jpg');
+    background-image: url('../img/images/login-background-1x.jpg');
     background-size: cover;
 
     @include retina {
-      background-image: url('../images/images/login-background-2x.jpg');
+      background-image: url('../img/images/login-background-2x.jpg');
     }
   }
 }
