@@ -1,9 +1,6 @@
 .header {
   padding: 8px 16px;
   border-bottom: 1px solid;
-  margin-left: auto;
-  margin-right: auto;
-
   @include desk {
     padding: 8px 84px;
     border-top: 1px solid;

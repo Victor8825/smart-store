@@ -1,0 +1,102 @@
+<section class="create-account__container container">
+  <div class="background-wrapper"></div>
+  <div class="auth__text auth__text--create-account-margin">
+    <svg class="arrow-left" width="24" height="24">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-left"></use>
+    </svg>
+    <p class="auth__text-main">Головна</p>
+    <svg class="arrow-right" width="16" height="16">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"></use>
+    </svg>
+    <p class="auth__text-login">Створити акаунт</p>
+  </div>
+
+  <div class="create-account__wrapper">
+    <h3 class="create-account__header">Створити аккаунт</h3>
+    <ul class="auth-options create-account-options">
+      <li class="auth-options__item create-account-options__item">
+        <svg class="icon-google" width="16" height="16">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-google"></use>
+        </svg>
+        <a href="#">Увійти з Google</a>
+      </li>
+      <li class="auth-options__item create-account-options__item">
+        <svg class="icon-apple" width="16" height="16">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-apple"></use>
+        </svg>
+        <a href="#">Увійти з Apple</a>
+      </li>
+    </ul>
+    <p class="login-form__paragraph-text login-form__paragraph-text--modifier">
+      або
+    </p>
+    <form
+      class="create-account__form"
+      name="create-account-form"
+      novalidate
+      method="post"
+    >
+      <input
+        class="form-input _tel _req"
+        type="text"
+        name="first-name"
+        placeholder="Ім'я"
+        aria-label="create account form first name"
+        autocomplete="on"
+        autofocus
+        required
+      />
+      <input
+        class="form-input _tel _req"
+        type="text"
+        name="second-name"
+        placeholder="Прізвище"
+        aria-label="create account form second name"
+        autocomplete="on"
+        required
+      />
+      <input
+        class="form-input _tel _req"
+        type="email"
+        name="email"
+        placeholder="Пошта"
+        aria-label="create account form email"
+        autocomplete="on"
+        required
+      />
+      <input
+        class="form-input _tel _req"
+        type="phone"
+        name="phone"
+        placeholder="Телефон"
+        aria-label="create account phone"
+        autocomplete="on"
+        required
+      />
+      <div class="login-form__password-thumb">
+        <input
+          class="form-input _req"
+          type="password"
+          name="password"
+          aria-label="create account password"
+          placeholder="Пароль"
+          autocomplete="on"
+          minlength="8"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+          title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
+          required
+        />
+        <svg class="eye-open" width="24" height="24">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-eye-open"></use>
+        </svg>
+      </div>
+      <p class="login-form__password-success">Надійний пароль</p>
+      <button type="submit" class="btn create-account__btn">
+        Зареєструватися
+      </button>
+    </form>
+    <button type="button" class="btn create-account__confirmation-btn">
+      Вже є акаунт?
+    </button>
+  </div>
+</section>

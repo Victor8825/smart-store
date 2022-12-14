@@ -1,0 +1,99 @@
+.create-account__container {
+  position: relative;
+}
+.create-account__wrapper {
+  padding: 40px 16px;
+  @include desk {
+    padding: 40px;
+    border: 1px solid #0e1012;
+    width: 416px;
+    height: 748px;
+    margin-left: 72px;
+    margin-bottom: 62px;
+  }
+}
+
+.login-form__paragraph-text--modifier {
+  margin: 32px 0px;
+}
+
+.create-account__header {
+  text-align: center;
+  margin-bottom: 40px;
+  @include font(700, 32px, 40px, null);
+}
+
+.create-account__btn {
+  min-width: 343px;
+  height: 48px;
+  padding: 10px 16px;
+  background-color: getColor('black');
+  color: getColor('white');
+  @include font(500, 16px, 24px, null);
+  border: 1px solid #0e1012;
+  opacity: 0.5;
+
+  @include desk {
+    min-width: 336px;
+    @include font(500, 16px, 16px, null);
+  }
+}
+
+.create-account__btn--success {
+  opacity: 1;
+}
+
+.create-account__confirmation-btn {
+  width: 148px;
+  height: 44px;
+  padding: 10px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  @include font(500, 16px, 24px, null);
+
+  @include desk {
+    width: 140px;
+    height: 36px;
+    @include font(500, 16px, 24px, null);
+  }
+}
+
+.auth__text--create-account-margin {
+  @include desk {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.login-form__password-success {
+  color: getColor('green');
+  font-family: $secondaryFont;
+  @include font(400, 12px, 20px, null);
+
+  margin-top: 4px;
+  margin-bottom: 8px;
+  visibility: hidden;
+}
+
+.login-form__password-success--visible {
+  visibility: visible;
+}
+
+.create-account__form {
+  & input {
+    min-width: 343px;
+    height: 48px;
+
+    @include desk {
+      min-width: 336px;
+    }
+  }
+  & > input {
+    margin-bottom: 24px;
+  }
+}
+
+.create-account-options__item {
+  min-width: 164px;
+}

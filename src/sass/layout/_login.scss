@@ -1,7 +1,4 @@
 .auth {
-  margin-left: auto;
-  margin-right: auto;
-
   @include desk {
     padding: 0px;
     position: relative;
@@ -28,6 +25,7 @@
 .auth__text {
   margin-top: 24px;
   margin-bottom: 12px;
+  margin-left: 12px;
   display: inline-flex;
   align-items: center;
 
@@ -99,26 +97,18 @@
   padding: 10px 0 10px 0;
 }
 
-.login-form {
-  input {
-    min-width: 343px;
-    height: 48px;
-    padding: 12px 24px;
-    border: 1px solid #0e1012;
+.login-form input {
+  min-width: 343px;
+  height: 48px;
 
-    @include desk {
-      min-width: 348px;
-    }
+  @include desk {
+    min-width: 348px;
   }
+}
 
-  input:nth-child(odd) {
-    padding: 12px 24px;
-  }
-
-  input:nth-child(even) {
-    margin-top: 40px;
-    margin-bottom: 24px;
-  }
+.login-form__phone {
+  margin-top: 40px;
+  margin-bottom: 24px;
 }
 
 .login-form__btn {
@@ -152,14 +142,6 @@
 .login-form__heading {
   margin-left: inherit;
   margin-right: auto;
-}
-
-.login-form__phone--success {
-  border-color: getColor('green');
-}
-
-.login-form__phone--failure {
-  border-color: getColor('red');
 }
 
 .login-form__password-thumb {
@@ -245,15 +227,6 @@
     flex: 0 1 auto;
   }
 }
-
-// .auth-options__item:nth-child(even) {
-//   margin-top: 16px;
-//   margin-bottom: 8px;
-
-//   @include desk {
-//     margin-top: 0px;
-//   }
-// }
 
 .auth__forget-password-btn {
   @include font(500, 16px, 16px, null);

@@ -2,13 +2,9 @@
   color: getColor('white');
   background-color: getColor('black');
   line-height: 1;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .wrapper {
-  // display: grid;
-  // padding: 24px 32px 21px 32px;
   @include desk {
     display: grid;
     height: 576px;
