@@ -24,6 +24,7 @@
 .form-input {
   padding: 12px 24px;
   border: 1px solid #0e1012;
+  @include font(400, 16px, 24px, null);
 }
 
 .form-input--success {

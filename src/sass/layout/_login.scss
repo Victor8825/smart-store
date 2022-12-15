@@ -203,7 +203,6 @@
 }
 
 .auth-options__item {
-//   min-width: 347px;
   height: 40px;
   border: 1px solid #e1e4e8;
   display: flex;
@@ -217,10 +216,6 @@
   &:first-child {
     margin-bottom: 16px;
     border: none;
-
-//     @include desk {
-//       margin-bottom: 0px;
-//     }
   }
 
   @include desk {
@@ -233,9 +228,6 @@
   @include font(500, 16px, 16px, null);
   margin: 8px auto 0px;
   padding: 10px 16px;
-
-  // display: block;
-  // text-align: center;
 }
 
 .auth-wrapper__newbee {
