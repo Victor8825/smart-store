@@ -5,8 +5,9 @@
 @import './components/common';
 @import './utils/hidden-tool';
 
-@import './layout/header';
-@import './layout/footer';
-@import './layout/login';
-@import './layout/login-create-account';
-@import './layout/login-change-password';
+@import './layout/header/header';
+@import './layout/footer/footer';
+@import './layout/login-registration/login';
+@import './layout/login-registration/login-create-account';
+@import './layout/login-registration/login-change-password';
+@import './layout/login-registration/login-change-password-verification';

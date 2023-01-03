@@ -21,6 +21,10 @@
   text-align: center;
 }
 
+.btn--success {
+  opacity: 1;
+}
+
 .form-input {
   padding: 12px 24px;
   border: 1px solid #0e1012;
@@ -33,4 +37,28 @@
 
 .form-input--failure {
   border-color: getColor('red');
+}
+
+.decorative-link {
+  // text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    // left: 0;
+    left: 50%;
+    width: 0;
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    left: 0;
+    width: 100%;
+  }
 }
