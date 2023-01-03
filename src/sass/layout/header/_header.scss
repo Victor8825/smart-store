@@ -86,3 +86,10 @@
     height: 24px;
   }
 }
+
+.decorative-link--header {
+  @extend .decorative-link;
+  &::after {
+    background-color: getColor('black');
+  }
+}
