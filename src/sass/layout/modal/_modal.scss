@@ -1,0 +1,53 @@
+.modal-overlay {
+  width: 100%;
+  z-index: 998;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity $trans-time $cubic, visibility $trans-time $cubic,
+    background-color $trans-time $cubic;
+}
+
+.modal {
+  z-index: 999;
+  position: absolute;
+  max-width: 320px;
+  width: 100%;
+  background: white;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0 28px 42px rgba(0, 0, 0, 0.38), 0 20px 20px rgba(0, 0, 0, 0.33);
+
+  transition: transform 600ms $cubic, opacity 600ms $cubic,
+    visibility 800ms $cubic, box-shadow 600ms $cubic;
+
+  @include desk {
+    max-width: 650px;
+  }
+}
+
+.modal_close-btn {
+  padding: 10px;
+  width: 200px;
+  font-size: 1.1em;
+  background: #32bacf;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}

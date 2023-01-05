@@ -23,6 +23,9 @@ $colors: (
   'green': #14b859,
 );
 
+$cubic: cubic-bezier(0.465, 0.183, 0.153, 0.946);
+$trans-time: 300ms;
+
 @function getColor($key) {
   @return map-get($colors, $key);
 }
