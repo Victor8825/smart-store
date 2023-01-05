@@ -1,0 +1,98 @@
+.verification-account__container {
+  @include desk {
+    padding: 0px;
+    position: relative;
+    height: 780px;
+  }
+}
+
+.verification-account__thumb {
+  padding: 40px 16px;
+
+  @include desk {
+    width: 416px;
+    height: auto;
+    padding: 0;
+    margin-left: 72px;
+
+    & > h3,
+    p {
+      text-align: left;
+    }
+  }
+}
+
+.account-verification-form__inputs-wrap {
+  display: flex;
+  gap: 24px;
+  height: 62px;
+}
+
+.account-verification-form__input {
+  text-align: center;
+  width: 68px;
+  height: 62px;
+  border: none;
+  border-bottom: 1px solid #c2c6cb;
+  @include font(700, 48px, 60px, null);
+
+  @include desk {
+    width: 86px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}
+
+.account-verification-form__failure {
+  input {
+    border-color: getColor('red');
+  }
+}
+
+.account-verification__submit-btn {
+  @extend .change-password__btn;
+  width: 100%;
+  height: 48px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+
+  @include desk {
+    margin-top: 40px;
+  }
+}
+
+.account-verification__retry-btn {
+  @extend .change-password__btn;
+  width: 100%;
+  height: 48px;
+  background-color: getColor('white');
+  color: getColor('black');
+  opacity: 1;
+}
+
+.auth__text--verification-account {
+  @include desk {
+    margin-bottom: 37px;
+  }
+}
+
+.verification-account__additional-text {
+  display: none;
+  @include desk {
+    display: unset;
+    color: getColor('gray-body');
+    @include font(400, 14px, 20px, null);
+  }
+}
+
+.account-verification__failure {
+  color: getColor('red');
+  font-family: $secondaryFont;
+  @include font(400, 16px, 24px, null);
+
+  margin-top: 16px;
+}

@@ -1,0 +1,75 @@
+<section class="verification-account__container container">
+  <div class="background-wrapper"></div>
+  <div class="auth__text auth__text--verification-account">
+    <svg class="arrow-left" width="24" height="24">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-left"></use>
+    </svg>
+    <p class="auth__text-main">Головна</p>
+    <svg class="arrow-right" width="16" height="16">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"></use>
+    </svg>
+    <p class="verification-account__additional-text">Створити акаунт</p>
+  </div>
+  <div class="verification-account__thumb">
+    <h3 class="change-password__heading">Верифікація аккаунта</h3>
+    <p class="change-password__text">
+      Ми надіслали код для верифікації вашого акаунта на номер
+      <b>+380505559817</b>. Будь ласка, введіть надісланий код для підтвердження
+      вашого акаунта.
+    </p>
+    <form
+      name="verification-account-form"
+      class="verification-account-form"
+      method="post"
+      novalidate
+    >
+      <div class="account-verification-form__inputs-wrap">
+        <input
+          class="account-verification-form__input"
+          type="number"
+          name="number"
+          aria-label="number value for account-verification-form"
+          autocomplete="on"
+          autofocus
+          required
+        />
+        <input
+          class="account-verification-form__input"
+          type="number"
+          name="number"
+          aria-label="number value for account-verification-form"
+          autocomplete="on"
+          autofocus
+          required
+        />
+        <input
+          class="account-verification-form__input"
+          type="number"
+          name="number"
+          aria-label="number value for account-verification-form"
+          autocomplete="on"
+          autofocus
+          required
+        />
+        <input
+          class="account-verification-form__input"
+          type="number"
+          name="number"
+          aria-label="number value for account-verification-form"
+          autocomplete="on"
+          autofocus
+          required
+        />
+      </div>
+      <p class="account-verification__failure visually-hidden">
+        Код невірний. Спробуйте ще раз, або надішліть код повторно
+      </p>
+      <button type="submit" class="btn account-verification__submit-btn">
+        Завершити верифікацію
+      </button>
+      <button type="button" class="btn account-verification__retry-btn">
+        Надіслати код повторно
+      </button>
+    </form>
+  </div>
+</section>
