@@ -111,6 +111,10 @@
   margin-bottom: 24px;
 }
 
+// .login-form__btn--success {
+//   opacity: 1;
+// }
+
 .login-form__btn {
   min-width: 343px;
   height: 48px;
@@ -124,10 +128,6 @@
   @include desk {
     min-width: 348px;
   }
-}
-
-.login-form__btn--success {
-  opacity: 1;
 }
 
 .login-form__heading {

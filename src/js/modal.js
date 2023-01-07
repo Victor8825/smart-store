@@ -7,7 +7,7 @@ const showModalWindow = () => {
   modalWindowOverlay.classList.remove('visually-hidden');
   body.style.overflow = 'hidden';
 };
-//Remove all the evemtListeners
+//Remove all the eventListeners
 const removeAllEventListeners = () => {
   openModalBtn.removeEventListener('click', showModalWindow, true);
   closeModalBtn.removeEventListener('click', hideModalWindow, true);
