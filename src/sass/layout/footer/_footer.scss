@@ -7,9 +7,12 @@
 .wrapper {
   @include desk {
     display: grid;
-    height: 576px;
-    grid-template-columns: 586px 586px 268px;
-    grid-template-rows: 168px 344px 64px;
+    height: auto;
+    // height: 576px;
+    grid-template-columns: 1fr 1fr minmax(auto, 268px);
+    // grid-template-columns: 586px 586px 268px;
+    grid-template-rows: repeat(3, auto);
+    // grid-template-rows: 168px 344px 64px;
     grid-template-areas:
       'footer-logo newdrop footer-icons'
       'assortment about footer-icons'
@@ -19,8 +22,8 @@
 
 .footer-logo {
   padding: 24px 0;
-
   @include desk {
+    padding: 24px 0 24px 72px;
     grid-area: footer-logo;
   }
 }
@@ -30,12 +33,26 @@
   margin-right: auto;
   width: 80px;
   height: 80px;
-  align-items: center;
+  @include desk {
+    margin-left: 0;
+    margin-right: 0;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.footer-inner-wrap {
+  padding: 24px 0;
+
+  @include desk {
+    padding: 24px 0 24px 72px;
+  }
 }
 
 .footer-icons {
   @include desk {
     grid-area: footer-icons;
+    border-left: 1px solid #ffffff;
   }
 }
 
@@ -46,9 +63,9 @@
   grid-template-columns: repeat(3, auto);
   @include desk {
     border-top: none;
+    border-bottom: none;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    border-left: 1px solid #ffffff;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
@@ -101,9 +118,6 @@
 }
 
 .newdrop-list {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  height: 168px;
   border-bottom: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
@@ -111,6 +125,7 @@
   justify-content: space-between;
 
   @include desk {
+    align-items: baseline;
     border-bottom: none;
   }
 }
@@ -130,9 +145,6 @@
 }
 
 .assortment-list {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  height: 344px;
   border-bottom: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
@@ -140,6 +152,7 @@
   justify-content: space-between;
 
   @include desk {
+    align-items: baseline;
     border-bottom: none;
   }
 }
@@ -157,9 +170,6 @@
 }
 
 .about-list {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  height: 344px;
   border-bottom: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
@@ -168,6 +178,7 @@
 
   @include desk {
     border-bottom: none;
+    align-items: baseline;
   }
 }
 
@@ -190,6 +201,8 @@
   @include desk {
     display: grid;
     grid-template-rows: auto;
+    justify-content: space-between;
+    align-items: center;
     grid-template-columns: repeat(2, auto);
     padding: 22px 72px;
   }

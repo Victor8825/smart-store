@@ -6,6 +6,12 @@ body {
   font-weight: 500;
   color: getColor('black');
   background-color: getColor('background');
+  min-height: 100vh;
+
+  @include desk {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 // Сброс отступов
@@ -13,7 +19,7 @@ body {
 h1,
 h2,
 h3,
-h h4,
+h4,
 h5,
 h6,
 p {

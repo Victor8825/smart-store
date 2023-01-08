@@ -9,6 +9,16 @@
   }
 }
 
+.responsive-container {
+  margin: 0 auto;
+  min-width: $minWidth;
+
+  @include desk {
+    max-width: $maxWidth;
+    // min-width: 1000px;
+  }
+}
+
 .btn {
   font-family: inherit;
   background-color: transparent;
@@ -20,10 +30,6 @@
   justify-content: center;
   text-align: center;
 }
-
-// .btn--success {
-//   opacity: 1;
-// }
 
 .form-input {
   padding: 12px 24px;
@@ -42,6 +48,7 @@
 .decorative-link {
   // text-transform: uppercase;
   display: inline-block;
+  padding-top: 5px;
   padding-bottom: 5px;
   position: relative;
 

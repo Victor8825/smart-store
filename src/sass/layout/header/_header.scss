@@ -19,6 +19,7 @@
 
   @include desk {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 24px;
   }
@@ -36,19 +37,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 12px;
+  }
+
+  & > li {
+    @include desk {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
 }
 
 .logo {
   width: 56px;
   height: 56px;
+  margin-left: auto;
   margin-right: auto;
 
   @include desk {
     width: 68px;
     height: 68px;
-    margin-left: auto;
   }
 }
 
@@ -66,7 +74,7 @@
 .button-burger {
   width: 44px;
   height: 44px;
-  margin-right: 100px;
+  // margin-right: 100px;
   @include desk {
     display: none;
   }
@@ -75,6 +83,7 @@
 .button-user {
   width: 44px;
   height: 44px;
+  margin-left: 8px;
   @include desk {
     display: none;
   }
@@ -87,9 +96,19 @@
   }
 }
 
+.icon-chevrone-down {
+  margin-left: 8px;
+  vertical-align: text-bottom;
+}
+
 .decorative-link--header {
   @extend .decorative-link;
   &::after {
     background-color: getColor('black');
   }
+}
+
+.link-header--inactive {
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
