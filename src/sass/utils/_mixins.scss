@@ -32,7 +32,7 @@
 }
 //change px tp percent
 @function prc($pxOne, $pxTwo) {
-  $result: math.div($pxOne, $pxTwo) * 100%;
+  $result: ($pxOne/$pxTwo) * 100%;
   @return $result;
 }
 

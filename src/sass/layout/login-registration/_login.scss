@@ -1,25 +1,18 @@
-.auth {
-  @include desk {
-    padding: 0px;
-    position: relative;
-    height: 780px;
-  }
-}
+// .auth {
+//   @include desk {
+//     padding: 0px;
+//     position: relative;
+//     height: 780px;
+//   }
+// }
 
 .background-wrapper {
   @include desk {
-    position: absolute;
-    z-index: -1;
-    right: 0px;
-    max-width: 818px;
-    width: 818px;
-    height: 780px;
+    min-height: 780px;
     background-image: url('../img/images/login-background-1x.jpg');
-    background-size: contain;
-
-    @include retina {
-      background-image: url('../img/images/login-background-2x.jpg');
-    }
+    background-position: left 622px top;
+    background-repeat: no-repeat;
+    padding-bottom: 62px;
   }
 }
 
@@ -75,22 +68,29 @@
 .auth-wrapper {
   @include desk {
     max-width: 856px;
-    min-height: 500px;
     display: flex;
     border: 1px solid #0e1012;
     margin-left: 72px;
     margin-right: 72px;
   }
 }
-
-.auth-wrapper__login {
-  padding: 40px 16px;
+.auth-wrapper__login--thumb {
   background-color: getColor('yellow-bg');
-
   @include desk {
     width: 50%;
-    padding: 40px;
     border-right: 1px solid #0e1012;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.auth-wrapper__login {
+  padding: 40px 16px;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  @include desk {
+    max-width: 100%;
+    padding: 40px;
   }
 }
 
@@ -236,12 +236,14 @@
 .auth-wrapper__newbee {
   text-align: center;
   padding: 40px 16px;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
 
   & .newbee-header {
     margin-bottom: 24px;
     @include desk {
       margin-bottom: 40px;
-      // @include adaptiv-value('margin-bottom', 40, 10, 1);
     }
   }
 
@@ -258,12 +260,12 @@
   }
 
   @include desk {
-    // max-width: 428px;
-    // width: 428px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
     width: 50%;
-    padding: 40px 40px 180px;
+    padding: 40px 40px;
     background-color: getColor('white');
-    border-right: 1px solid #0e1012;
   }
 }
 

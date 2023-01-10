@@ -9,9 +9,14 @@
 }
 
 .nav {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+}
+
+.nav-left {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
 }
 
 .menu-left {
@@ -20,8 +25,14 @@
   @include desk {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 12px;
+  }
+
+  & > li {
+    @include desk {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
 }
 
@@ -29,14 +40,22 @@
   color: getColor('gray-body');
 }
 
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include desk {
+    gap: 8px;
+  }
+  gap: 12px;
+}
+
 .menu-right {
   display: none;
 
   @include desk {
-    margin-left: 24px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 12px;
   }
 
@@ -49,15 +68,14 @@
 }
 
 .logo {
-  width: 56px;
+  min-width: 56px;
   height: 56px;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
 
   @include desk {
-    width: 68px;
-    height: 68px;
+    max-width: 68px;
+    max-height: 68px;
   }
 }
 

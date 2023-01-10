@@ -41,27 +41,14 @@
   }
 }
 
-.footer-inner-wrap {
-  padding: 24px 0;
-
-  @include desk {
-    padding: 24px 0 24px 72px;
-  }
-}
-
-.footer-icons {
-  @include desk {
-    grid-area: footer-icons;
-    border-left: 1px solid #ffffff;
-  }
-}
-
 .footer-icons__list {
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   display: grid;
   grid-template-columns: repeat(3, auto);
   @include desk {
+    grid-area: footer-icons;
+    border-left: 1px solid #ffffff;
     border-top: none;
     border-bottom: none;
     grid-template-columns: 1fr;
@@ -111,37 +98,28 @@
 }
 
 .newdrop {
-  @include desk {
-    grid-area: newdrop;
-    border-left: 1px solid #ffffff;
-  }
-}
-
-.newdrop-list {
   border-bottom: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 24px 0;
 
   @include desk {
+    grid-area: newdrop;
+    border-left: 1px solid #ffffff;
+    padding: 24px 0 24px 72px;
     align-items: baseline;
     border-bottom: none;
   }
 }
 
-.newdrop-list__item {
+.newdrop__item {
   padding: 8px 12px;
 }
 
-.newdrop-list li:last-child {
+.newdrop li:last-child {
   color: #ffffff40;
-}
-.assortment {
-  @include desk {
-    grid-area: assortment;
-    border-top: 1px solid #ffffff;
-  }
 }
 
 .assortment-list {
@@ -150,9 +128,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 24px 0;
 
   @include desk {
+    grid-area: assortment;
+    padding: 24px 0 24px 72px;
     align-items: baseline;
+    border-top: 1px solid #ffffff;
     border-bottom: none;
   }
 }
@@ -161,23 +143,20 @@
   padding: 8px 12px;
 }
 
-.about {
-  @include desk {
-    grid-area: about;
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
-  }
-}
-
 .about-list {
   border-bottom: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 24px 0;
 
   @include desk {
+    grid-area: about;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
     border-bottom: none;
+    padding: 24px 0 24px 72px;
     align-items: baseline;
   }
 }
@@ -186,19 +165,14 @@
   padding: 8px 12px;
 }
 
-.support {
-  @include desk {
-    grid-area: support;
-    border-top: 1px solid #ffffff;
-  }
-}
-
 .support-list {
   font-family: Raleway;
   @include font(400, 14px, 20px, null);
   padding: 24px 32px;
 
   @include desk {
+    grid-area: support;
+    border-top: 1px solid #ffffff;
     display: grid;
     grid-template-rows: auto;
     justify-content: space-between;
@@ -215,10 +189,3 @@
     margin-bottom: 0px;
   }
 }
-
-// .footer-icon__instagram,
-// .footer-icon__telegram,
-// .footer-icon__facebook {
-//   border-radius: 50%;
-//   background-color: getColor('white');
-// }
