@@ -1,6 +1,7 @@
 .header {
   padding: 8px 16px;
   border-bottom: 1px solid;
+
   @include desk {
     padding: 8px 84px;
     border-top: 1px solid;
@@ -24,7 +25,6 @@
 
   @include desk {
     display: flex;
-<<<<<<< HEAD
     align-items: center;
     gap: 12px;
   }
@@ -34,9 +34,6 @@
       padding-left: 12px;
       padding-right: 12px;
     }
-=======
-    gap: 24px;
->>>>>>> 5e1c6f13e318cdcec04ff1e23acbffedbaff5ae0
   }
 }
 
@@ -48,14 +45,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-<<<<<<< HEAD
 
   @include desk {
     gap: 8px;
   }
   gap: 12px;
-=======
->>>>>>> 5e1c6f13e318cdcec04ff1e23acbffedbaff5ae0
 }
 
 .menu-right {
@@ -77,11 +71,8 @@
 .logo {
   min-width: 56px;
   height: 56px;
-<<<<<<< HEAD
   margin-left: auto;
   margin-right: auto;
-=======
->>>>>>> 5e1c6f13e318cdcec04ff1e23acbffedbaff5ae0
 
   @include desk {
     max-width: 68px;
