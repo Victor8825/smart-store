@@ -10,10 +10,13 @@
   padding: 40px 16px;
 
   @include desk {
-    width: 416px;
+    background-color: getColor('white');
+    border: 1px solid #0e1012;
+    max-width: 416px;
     height: auto;
-    padding: 0;
+    padding: 40px;
     margin-left: 72px;
+    margin-right: 72px;
 
     & > h3,
     p {
@@ -30,14 +33,16 @@
 
 .account-verification-form__input {
   text-align: center;
-  width: 68px;
+  width: 100%;
+  // width: 68px;
   height: 62px;
   border: none;
   border-bottom: 1px solid #c2c6cb;
   @include font(700, 48px, 60px, null);
 
   @include desk {
-    width: 86px;
+    width: 100%;
+    // width: 86px;
   }
 
   &:active,

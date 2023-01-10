@@ -3,9 +3,10 @@ $primaryFont: 'Exo 2', sans-serif;
 $secondaryFont: 'Raleway', sans-serif;
 
 //container
-$minWidth: 375px;
-$maxWidth: 1440px;
-$maxWidthContainer: 1170px;
+$minWidthContainer: 375px;
+$maxWidthContainer: 1440;
+$maxWidth: 1920;
+// $maxWidthContainer: 1170px;
 $responsiveType: 2;
 
 //colors

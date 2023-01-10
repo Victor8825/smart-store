@@ -4,11 +4,13 @@
 .create-account__wrapper {
   padding: 40px 16px;
   @include desk {
+    background-color: getColor('white');
     padding: 40px;
     border: 1px solid #0e1012;
-    width: 416px;
-    height: 748px;
+    max-width: 416px;
+    height: auto;
     margin-left: 72px;
+    margin-right: 72px;
     margin-bottom: 62px;
   }
 }
@@ -24,7 +26,7 @@
 }
 
 .create-account__btn {
-  min-width: 343px;
+  width: 100%;
   height: 48px;
   padding: 10px 16px;
   background-color: getColor('black');
@@ -34,7 +36,7 @@
   opacity: 0.5;
 
   @include desk {
-    min-width: 336px;
+    width: 100%;
     @include font(500, 16px, 16px, null);
   }
 }
@@ -44,7 +46,7 @@
 }
 
 .create-account__confirmation-btn {
-  width: 148px;
+  width: 100%;
   height: 44px;
   padding: 10px 16px;
   margin-left: auto;
@@ -53,7 +55,7 @@
   @include font(500, 16px, 24px, null);
 
   @include desk {
-    width: 140px;
+    width: 100%;
     height: 36px;
     @include font(500, 16px, 24px, null);
   }
@@ -82,11 +84,11 @@
 
 .create-account__form {
   & input {
-    min-width: 343px;
+    width: 100%;
     height: 48px;
 
     @include desk {
-      min-width: 336px;
+      width: 100%;
     }
   }
   & > input {
@@ -95,5 +97,5 @@
 }
 
 .create-account-options__item {
-  min-width: 164px;
+  width: 100%;
 }
