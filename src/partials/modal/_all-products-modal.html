@@ -1,0 +1,80 @@
+<div class="all-products-modal-overlay visually-hidden">
+  <div class="all-products-modal">
+    <div class="all-products-modal__header">
+      <button class="all-products-modal__header-reset-btn" type="button">
+        Скинути
+      </button>
+      <p>Фільтр</p>
+      <button type="button" class="all-products-modal__close-btn">
+        <svg class="all-products-modal__icon-close" width="32" height="32">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filters-thumb">
+      <div class="product-types">
+        <form name="product-types">
+          <p>Тип товару</p>
+          <!-- <input
+          type="checkbox"
+          name="product-type"
+          id="cb1"
+          value="Верхній одяг" hidden
+        /> -->
+          <label for="cb1">Верхній одяг</label>
+          <!-- <input type="checkbox" name="product-type" id="cb2" value="Костюми" hidden/> -->
+          <label for="cb2">Костюми</label>
+          <!-- <input type="checkbox" name="product-type" id="cb3" value="Сукні" hidden/> -->
+          <label for="cb3">Сукні</label>
+          <!-- <input type="checkbox" name="product-type" id="cb4" value="Футболки" hidden/> -->
+          <label for="cb4">Футболки</label>
+          <!-- <input type="checkbox" name="product-type" id="cb5" value="Штани" hidden/> -->
+          <label for="cb5">Штани</label>
+          <!-- <input type="checkbox" name="product-type" id="cb6" value="Взуття" hidden/> -->
+          <label for="cb6">Взуття</label>
+          <!-- <input
+          type="checkbox"
+          name="product-type"
+          id="cb7"
+          value="Спідня білизна" hidden
+        /> -->
+          <label for="cb7">Спідня білизна</label>
+        </form>
+      </div>
+      <div class="special-offers">
+        <form name="special-offers">
+          <p>Спеціальні пропозиції</p>
+          <!-- <input type="checkbox" name="special-offer" id="cb8" value="NEW DROP" hidden/> -->
+          <label for="cb8">NEW DROP</label>
+          <!-- <input type="checkbox" name="special-offer" id="cb9" value="Знижки" hidden/> -->
+          <label for="cb9">Знижки</label>
+        </form>
+      </div>
+      <div class="price-slider">
+        <p>Ціна (грн)</p>
+        <form name="price-slider">
+          <input
+            id="input-0"
+            type="number"
+            name="price-slider-input"
+            min="0"
+            max="10000"
+            placeholder="0"
+          />
+          <input
+            id="input-1"
+            type="number"
+            name="price-slider-input"
+            min="0"
+            max="10000"
+            placeholder="10000"
+          />
+        </form>
+        <div id="range-slider"></div>
+        <button type="button" class="price-slider-btn">
+          Показати 345 товарів
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

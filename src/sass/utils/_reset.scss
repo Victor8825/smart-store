@@ -13,6 +13,14 @@ body {
   }
 }
 
+.overflow-hidden body {
+  overflow: hidden;
+
+  @include desk {
+    overflow: auto;
+  }
+}
+
 // Сброс отступов
 
 h1,
@@ -42,6 +50,7 @@ ul {
 // сброс отступа у картинок и базовая отзывчивость
 img {
   display: block;
-  max-width: 100%;
+  // max-width: 100%;
+  width: 100%;
   height: auto;
 }

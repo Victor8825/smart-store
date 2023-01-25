@@ -4,15 +4,20 @@ const closeModalBtn = document.querySelector('.modal_close-btn');
 const body = document.body;
 
 const showModalWindow = () => {
-  modalWindowOverlay.classList.remove('visually-hidden');
-  body.style.overflow = 'hidden';
+  if (modalWindowOverlay) {
+    modalWindowOverlay.classList.remove('visually-hidden');
+    body.style.overflow = 'hidden';
+    closeModalBtn.addEventListener('click', hideModalWindow);
+    modalWindowOverlay.addEventListener('click', hideModalWindowOnBlur);
+    document.addEventListener('keydown', onEscClick);
+  }
 };
 //Remove all the eventListeners
 const removeAllEventListeners = () => {
-  openModalBtn.removeEventListener('click', showModalWindow, true);
-  closeModalBtn.removeEventListener('click', hideModalWindow, true);
-  modalWindowOverlay.removeEventListener('click', hideModalWindowOnBlur, true);
-  document.removeEventListener('keydown', onEscClick, true);
+  openModalBtn.removeEventListener('click', showModalWindow);
+  closeModalBtn.removeEventListener('click', hideModalWindow);
+  modalWindowOverlay.removeEventListener('click', hideModalWindowOnBlur);
+  document.removeEventListener('keydown', onEscClick);
 };
 
 //Hide modal
@@ -29,19 +34,12 @@ const hideModalWindowOnBlur = e => {
   }
 };
 
-openModalBtn.addEventListener('click', showModalWindow);
-closeModalBtn.addEventListener('click', hideModalWindow);
-modalWindowOverlay.addEventListener('click', hideModalWindowOnBlur);
+openModalBtn && openModalBtn.addEventListener('click', showModalWindow);
 
 //Hide modal when clicking on "Esc"
 const onEscClick = event => {
-  event.preventDefault();
-
-  if (event.code !== 'Escape') {
-    return;
+  if (event.code === 'Escape') {
+    event.preventDefault();
+    hideModalWindow();
   }
-
-  hideModalWindow();
 };
-
-document.addEventListener('keydown', onEscClick);

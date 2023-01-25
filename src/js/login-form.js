@@ -5,14 +5,15 @@ const loginFormPasswordInputRef = document.querySelector(
 const loginFormSubmitRef = document.querySelector('.login-form__btn');
 const loginFormErrorRef = document.querySelector('.login-form__password-error');
 const loginFormInputIcon = document.querySelector('.eye-open');
+loginFormInputIcon &&
+  loginFormInputIcon.addEventListener('mousedown', () => {
+    loginFormPasswordInputRef.setAttribute('type', 'text');
+  });
 
-loginFormInputIcon.addEventListener('mousedown', () => {
-  loginFormPasswordInputRef.setAttribute('type', 'text');
-});
-
-loginFormInputIcon.addEventListener('mouseup', () => {
-  loginFormPasswordInputRef.setAttribute('type', 'password');
-});
+loginFormInputIcon &&
+  loginFormInputIcon.addEventListener('mouseup', () => {
+    loginFormPasswordInputRef.setAttribute('type', 'password');
+  });
 
 function loginFormCheckInput(e) {
   if (
@@ -61,6 +62,9 @@ function loginFormPhoneEvent() {
   }
 }
 
-loginFormPhoneInputRef.addEventListener('input', loginFormCheckInput);
-loginFormPhoneInputRef.addEventListener('blur', loginFormPhoneEvent);
-loginFormPasswordInputRef.addEventListener('input', loginFormCheckInput);
+loginFormPhoneInputRef &&
+  loginFormPhoneInputRef.addEventListener('input', loginFormCheckInput);
+loginFormPhoneInputRef &&
+  loginFormPhoneInputRef.addEventListener('blur', loginFormPhoneEvent);
+loginFormPasswordInputRef &&
+  loginFormPasswordInputRef.addEventListener('input', loginFormCheckInput);

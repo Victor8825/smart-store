@@ -1,0 +1,410 @@
+<section class="all-products responsive-container">
+  <div class="auth__text auth__text--all-products">
+    <svg class="arrow-left" width="24" height="24">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-left"></use>
+    </svg>
+    <p class="auth__text-main">Головна</p>
+    <svg class="arrow-right" width="16" height="16">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"></use>
+    </svg>
+    <p class="auth__text-login">Створити акаунт</p>
+    <svg class="arrow-right" width="16" height="16">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"></use>
+    </svg>
+    <p class="auth__text-login">Усі товари</p>
+  </div>
+  <div class="filters-thumb">
+    <div class="all-products-modal__header">
+      <button class="all-products-modal__header-reset-btn" type="button">
+        Скинути
+      </button>
+      <p>Фільтр</p>
+      <button type="button" class="all-products-modal__close-btn">
+        <svg class="all-products-modal__icon-close" width="32" height="32">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="product-types">
+      <form name="product-types">
+        <p>Тип товару</p>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb1"
+          value="Верхній одяг"
+          hidden
+        />
+        <label for="cb1">Верхній одяг</label>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb2"
+          value="Костюми"
+          hidden
+        />
+        <label for="cb2">Костюми</label>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb3"
+          value="Сукні"
+          hidden
+        />
+        <label for="cb3">Сукні</label>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb4"
+          value="Футболки"
+          hidden
+        />
+        <label for="cb4">Футболки</label>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb5"
+          value="Штани"
+          hidden
+        />
+        <label for="cb5">Штани</label>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb6"
+          value="Взуття"
+          hidden
+        />
+        <label for="cb6">Взуття</label>
+        <input
+          type="checkbox"
+          name="product-type"
+          id="cb7"
+          value="Спідня білизна"
+          hidden
+        />
+        <label for="cb7">Спідня білизна</label>
+      </form>
+    </div>
+    <div class="special-offers">
+      <form name="special-offers">
+        <p>Спеціальні пропозиції</p>
+        <input
+          type="checkbox"
+          name="special-offer"
+          id="cb8"
+          value="NEW DROP"
+          hidden
+        />
+        <label for="cb8">NEW DROP</label>
+        <input
+          type="checkbox"
+          name="special-offer"
+          id="cb9"
+          value="Знижки"
+          hidden
+        />
+        <label for="cb9">Знижки</label>
+      </form>
+    </div>
+    <div class="price-slider">
+      <p>Ціна (грн)</p>
+      <form name="price-slider">
+        <input
+          id="input-0"
+          type="number"
+          name="price-slider-input"
+          min="0"
+          max="10000"
+          placeholder="0"
+        />
+        <div></div>
+
+        <input
+          id="input-1"
+          type="number"
+          name="price-slider-input"
+          min="0"
+          max="9999"
+          placeholder="9999"
+        />
+      </form>
+      <div id="range-slider"></div>
+      <button type="button" class="price-slider-btn">
+        Показати 9345 товарів
+      </button>
+    </div>
+  </div>
+  <div class="categories-dropdown-wrap" data-dropdown>
+    <button class="categories-btn" data-dropdown-btn>
+      Категорії: Усе
+      <svg class="icon-chevrone-down--all-products" width="16" height="16">
+        <use
+          href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"
+        ></use>
+      </svg>
+      <svg class="icon-chevrone-up--all-products" width="16" height="16">
+        <use
+          href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-up"
+        ></use>
+      </svg>
+    </button>
+    <ul class="categories-dropdown-menu">
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="./login.html"
+          class="decorative-link--header categories-dropdown-menu__link"
+        >
+          Усе</a
+        >
+      </li>
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="#"
+          class="decorative-link--header categories-dropdown-menu__link"
+          >Жіноче</a
+        >
+      </li>
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="#"
+          class="decorative-link--header categories-dropdown-menu__link"
+          >Чоловіче</a
+        >
+      </li>
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="#"
+          class="decorative-link--header categories-dropdown-menu__link"
+          >Дитяче</a
+        >
+      </li>
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="#"
+          class="decorative-link--header categories-dropdown-menu__link"
+          >Аксесуари</a
+        >
+      </li>
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="#"
+          class="decorative-link--header categories-dropdown-menu__link"
+          >Сумки</a
+        >
+      </li>
+      <li class="categories-dropdown-menu__item">
+        <a
+          href="#"
+          class="decorative-link--header categories-dropdown-menu__link"
+        >
+          Ювелірні вироби
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="filters-sort-thumb">
+    <div class="filters-dropdown-wrap">
+      <button class="filters-dropdown-btn">
+        <svg class="icon-filter" width="24" height="24">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-filter"></use>
+        </svg>
+        Фільтри
+      </button>
+    </div>
+    <div class="sort-dropdown-wrap" data-dropdown>
+      <div class="sort-dropdown-wrap-desktop">
+        <p>Сортувати за:</p>
+        <button type="button" data-dropdown-btn>
+          Ціни за зростанням
+          <svg class="icon-chevrone-down--all-products" width="16" height="16">
+            <use
+              href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"
+            ></use>
+          </svg>
+        </button>
+      </div>
+      <button class="sort-dropdown-btn" data-dropdown-btn>
+        <svg class="icon-sort" width="24" height="24">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-sort"></use>
+        </svg>
+        Ціни за зрост.
+      </button>
+      <ul class="sort-dropdown-menu">
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Новинки</a
+          >
+        </li>
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Ціни за зростанням</a
+          >
+        </li>
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Ціни за спаданням</a
+          >
+        </li>
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Доставка</a
+          >
+        </li>
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Знижка за зростанням</a
+          >
+        </li>
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Знижка за спаданням</a
+          >
+        </li>
+        <li class="sort-dropdown-menu__item">
+          <a href="#" class="decorative-link--header sort-dropdown-menu__link"
+            >Скинути</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="gallery-inscription-thumb">
+    <h5 class="gallery-heading">Усе</h5>
+    <p class="gallery-text">654 товарів</p>
+  </div>
+  <ul class="filters-sort-checked-list">
+    <li>
+      <p>
+        Верхній одяг
+        <svg class="icon-close" width="16" height="16">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-close"></use>
+        </svg>
+      </p>
+    </li>
+    <li>
+      <p>
+        Знижки
+        <svg class="icon-close" width="16" height="16">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-close"></use>
+        </svg>
+      </p>
+    </li>
+    <li>
+      <p>
+        Скинути фільтри
+        <svg class="icon-delete" width="16" height="16">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-delete"></use>
+        </svg>
+      </p>
+    </li>
+  </ul>
+  <div class="gallery-thumb">
+    <ul class="gallery-list">
+      <li class="gallery-item">
+        <div class="gallery-item-label">NEW DROP</div>
+        <div class="gallery-item__img-wrap">
+          <img src="./img/photo_1.jpg" alt="" />
+        </div>
+        <h5>Кардиган PRETTYLITTLETHING</h5>
+        <p>Доставка з м. Кропивницький</p>
+        <span>275 грн.</span>
+        <div class="gallery-item-button-thumb">
+          <button type="button">Придбати</button>
+          <button type="button">Деталі</button>
+        </div>
+      </li>
+      <li class="gallery-item">
+        <div class="gallery-item__img-wrap">
+          <img src="./img/photo_2.jpg" alt="" />
+        </div>
+        <h5>Каблучка</h5>
+        <p>Доставка з м. Кропивницький</p>
+        <div class="gallery-item__span-wrap">
+          <span>275 грн.</span>
+          <span>275 грн.</span>
+        </div>
+
+        <div class="gallery-item-button-thumb">
+          <button type="button">Придбати</button>
+          <button type="button">Деталі</button>
+        </div>
+      </li>
+      <li class="gallery-item">
+        <div class="gallery-item__img-wrap">
+          <img src="./img/photo_3.jpg" alt="" />
+        </div>
+        <h5>Брошка</h5>
+        <p>Доставка з м. Кропивницький</p>
+        <span>275 грн.</span>
+        <div class="gallery-item-button-thumb">
+          <button type="button">Придбати</button>
+          <button type="button">Деталі</button>
+        </div>
+      </li>
+      <li class="gallery-item">
+        <div class="gallery-item-label">NEW DROP</div>
+        <div class="gallery-item__img-wrap">
+          <img src="./img/photo_4.jpg" alt="" />
+        </div>
+        <h5>Кардиган PRETTYLITTLETHING</h5>
+        <p>Доставка з м. Кропивницький</p>
+        <span>275 грн.</span>
+        <div class="gallery-item-button-thumb">
+          <button type="button">Придбати</button>
+          <button type="button">Деталі</button>
+        </div>
+      </li>
+      <li class="gallery-item">
+        <div class="gallery-item__img-wrap">
+          <img src="./img/photo_5.jpg" alt="" />
+        </div>
+        <h5>Каблучка</h5>
+        <p>Доставка з м. Кропивницький</p>
+        <span>275 грн.</span>
+        <div class="gallery-item-button-thumb">
+          <button type="button">Придбати</button>
+          <button type="button">Деталі</button>
+        </div>
+      </li>
+      <li class="gallery-item">
+        <div class="gallery-item__img-wrap">
+          <img src="./img/photo_6.jpg" alt="" />
+        </div>
+        <h5>Брошка</h5>
+        <p>Доставка з м. Кропивницький</p>
+        <span>275 грн.</span>
+        <div class="gallery-item-button-thumb">
+          <button type="button">Придбати</button>
+          <button type="button">Деталі</button>
+        </div>
+      </li>
+    </ul>
+    <button class="gallery-show-more-btn" type="button">Показати ще</button>
+    <ul class="gallery-pagination-list">
+      <li>
+        <a href="#">
+          <svg width="30" height="30">
+            <use
+              href="./img/icons/symbol-defs-optimized.svg#icon-arrow-left"
+            ></use>
+          </svg>
+        </a>
+      </li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">...</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+      <li>
+        <a href="#">
+          <svg width="30" height="30">
+            <use
+              href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"
+            ></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

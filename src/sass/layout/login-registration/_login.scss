@@ -12,7 +12,7 @@
     background-image: url('../img/images/login-background-1x.jpg');
     background-position: left 622px top;
     background-repeat: no-repeat;
-    padding-bottom: 62px;
+    padding: 0 72px 62px 72px;
   }
   //   @include desk {
   //     position: absolute;
@@ -33,14 +33,14 @@
 .auth__text {
   margin-top: 24px;
   margin-bottom: 12px;
-  margin-left: 16px;
+  // margin-left: 16px;
   display: inline-flex;
   align-items: center;
 
   @include desk {
     margin-top: 40px;
     margin-bottom: 80px;
-    margin-left: 72px;
+    // margin-left: 72px;
     justify-content: center;
   }
 }
@@ -54,6 +54,7 @@
 }
 
 .arrow-left {
+  stroke: getColor('black');
   margin-right: 4px;
   @include desk {
     display: none;
@@ -61,6 +62,8 @@
 }
 
 .arrow-right {
+  stroke: getColor('black');
+
   display: none;
   @include desk {
     display: block;
@@ -84,8 +87,8 @@
     max-width: 856px;
     display: flex;
     border: 1px solid #0e1012;
-    margin-left: 72px;
-    margin-right: 72px;
+    // margin-left: 72px;
+    // margin-right: 72px;
   }
 }
 .auth-wrapper__login--thumb {
