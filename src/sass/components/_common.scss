@@ -48,9 +48,9 @@
 .decorative-link {
   // text-transform: uppercase;
   cursor: pointer;
-  display: inline-block;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 
   &::after {

@@ -116,6 +116,12 @@
 
 .newdrop__item {
   padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+
+  @include desk {
+    text-align: left;
+  }
 }
 
 .newdrop li:last-child {
@@ -141,6 +147,12 @@
 
 .assortment-list__item {
   padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+
+  @include desk {
+    text-align: left;
+  }
 }
 
 .about-list {
@@ -163,6 +175,12 @@
 
 .about-list__item {
   padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+
+  @include desk {
+    text-align: left;
+  }
 }
 
 .support-list {
