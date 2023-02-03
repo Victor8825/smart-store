@@ -14,9 +14,11 @@
 }
 
 .auth__text--all-products {
+  margin-left: 16px;
   @include desk {
     grid-area: auth-text;
     justify-self: start;
+    margin-left: 0px;
     margin: 40px 0 28px 0px;
   }
 }
@@ -76,12 +78,6 @@
   }
 }
 
-// .categories-btn--active {
-//   background-color: getColor('black');
-//   color: getColor('white');
-//   transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
-// }
-
 .categories-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -128,6 +124,25 @@
   display: unset;
   z-index: 2;
   background-color: #ffffff;
+
+  @include desk {
+    grid-area: categories-dropdown-menu;
+    width: auto;
+    justify-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    opacity: unset;
+    position: unset;
+    border: none;
+    margin-left: 24px;
+    margin-bottom: 32px;
+    padding: 0;
+    color: getColor('black');
+    font-family: $secondaryFont;
+    @include font(400, 18px, 26px, none);
+  }
 }
 
 .categories-dropdown-menu__item {
@@ -390,12 +405,6 @@
     font-family: $secondaryFont;
   }
 
-  & > span {
-    display: block;
-    text-align: center;
-    @include font(700, 18px, 26px, none);
-  }
-
   @include desk {
     // min-width: 306px;
   }
@@ -410,35 +419,41 @@
   right: 16px;
 }
 
-.gallery-item__span-wrap {
+.gallery-item__span-price {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  & span:first-child {
-    width: auto;
-    position: relative;
-    padding: 5px 12px;
-    font-family: $secondaryFont;
-    @include font(400, 14px, 20px, none);
-  }
-
-  & span:first-child::after {
-    content: '';
-    width: 55px;
-    height: 1px;
-    position: absolute;
-    background-color: getColor('gray-header');
-    top: 15px;
-    right: 11px;
-  }
-
-  & span:last-child {
-    padding: 2px 8px;
+  & > span {
+    display: block;
+    text-align: center;
     @include font(700, 18px, 26px, none);
-    color: getColor('grey-header');
-    background-color: getColor('yellow');
   }
+
+  // & span:first-child {
+  //   width: auto;
+  //   position: relative;
+  //   padding: 5px 12px;
+  //   font-family: $secondaryFont;
+  //   @include font(400, 14px, 20px, none);
+  // }
+
+  // & span:first-child::after {
+  //   content: '';
+  //   width: 80%;
+  //   height: 1px;
+  //   position: absolute;
+  //   background-color: getColor('gray-header');
+  //   top: 15px;
+  //   left: 10%;
+  // }
+
+  // & span:last-child {
+  //   padding: 2px 8px;
+  //   @include font(700, 18px, 26px, none);
+  //   color: getColor('grey-header');
+  //   background-color: getColor('yellow');
+  // }
 }
 
 .gallery-item-button-thumb {
@@ -534,12 +549,10 @@
   @include desk {
     @include font(700, 16px, 24px, none);
     grid-area: filters-sort-checked-list;
-    // border: 1px solid blue; //temporary
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-left: 24px;
-    // margin-right: 72px;
     margin-top: 16px;
 
     & > li {
@@ -579,23 +592,6 @@
     }
   }
 }
-
-// .price-slider__input-left::after {
-//   content: '';
-//   width: 40px;
-//   height: 5px;
-//   color: #e1e4e8;
-//   background-color: #e1e4e8;
-//   border: 1px solid #e1e4e8;
-//   display: block;
-//   margin-left: 16px;
-//   margin-right: 16px;
-// }
-
-// .pagination-arrow--inactive {
-//   fill: red;
-//   stroke: red;
-// }
 
 //modal styles
 .all-products-modal-overlay {
@@ -665,17 +661,55 @@
   }
 }
 
+// .item:hover {
+//   display: block;
+//   animation: fadeIn 0.5s;
+// }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+    transform: translateX(-100%);
+  }
+}
+
+// .filters-thumb.inactive {
+//   @include till_desk {
+//     animation: fadeOut $trans-time $cubic;
+//   }
+// }
+
 .filters-thumb.active {
-  opacity: 1;
+  // opacity: 1;
   display: block;
   z-index: 3;
   background-color: getColor('yellow-bg');
+  left: 0;
   top: 0;
   height: 100%;
   padding: 0;
   position: fixed;
   display: block;
   overflow: auto;
+  animation: fadeIn $trans-time $cubic forwards;
 
   @include desk {
     position: unset;
@@ -690,6 +724,14 @@
   padding: 0px 16px;
   background-color: #ffffff;
   @include font(700, 18px, 26px, none);
+  // animation: fadeOut 0.5s;
+  // animation-duration: 3000ms;
+
+  top: 0;
+  left: 0;
+  animation: fadeOut $trans-time $cubic;
+  // transform: translateX(-100%);
+  // transition: transform 2000ms ease, opacity 2000ms ease;
 
   & label {
     font-family: $secondaryFont;
@@ -714,19 +756,13 @@
     padding: 0;
     background-color: getColor('white');
     @include font(700, 16px, 24px, none);
+    animation: none;
+    // transform: translateX(0);
 
     label {
       @include font(400, 16px, 24px, none);
     }
   }
-
-  // & label {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: flex-start;
-  //   gap: 8px;
-  //   cursor: pointer;
-  // }
 
   & label::before {
     content: '';
@@ -740,30 +776,6 @@
       height: 24px;
     }
   }
-
-  // & label[control]::before {
-  //   content: url('../img/icons/Vector.svg');
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   background-color: black;
-  //   border: none;
-  // }
-  // & input[type='checkbox'] {
-  //   cursor: pointer;
-  //   width: 32px;
-  //   height: 32px;
-  //   border: 1px solid #c2c6cb;
-  //   background-color: getColor('yellow-bg');
-  //   opacity: 0;
-  //   position: absolute;
-
-  //   @include desk {
-  //     width: 24px;
-  //     height: 24px;
-  //     background-color: getColor('white');
-  //   }
-  // }
 
   & input[type='checkbox']:checked + label::before {
     content: url('../img/icons/Vector.svg');
@@ -785,32 +797,10 @@
   }
 }
 
-// &.filters-thumb--desktop {
-//   display: none;
+.filters-thumb.inactive.innactive {
+  animation: fadeOut $trans-time $cubic;
+}
 
-//   @include desk {
-//     display: block;
-//     width: auto;
-//     min-width: 200px;
-//     max-width: 306px;
-//     margin-left: 72px;
-//     padding: 0;
-
-//     @include font(700, 16px, 24px, none);
-
-//     & label {
-//       @include font(400, 16px, 24px, none);
-//     }
-
-//     & input {
-//       background-color: getColor('white');
-//     }
-//   }
-// }
-
-// @include desk {
-//   grid-area: filters-thumb;
-// }
 .product-types {
   padding: 24px 16px;
   border-bottom: 1px solid #e1e4e8;
@@ -820,18 +810,6 @@
     flex-direction: column;
   }
 
-  // & > form input {
-  //   width: 32px;
-  //   height: 32px;
-  //   border: 1px solid #c2c6cb;
-  //   opacity: 0;
-  //   position: absolute;
-
-  //   @include desk {
-  //     width: 24px;
-  //     height: 24px;
-  //   }
-  // }
   & > form > label:not(:last-child) {
     margin-bottom: 24px;
 
@@ -858,18 +836,6 @@
     display: flex;
     flex-direction: column;
   }
-
-  // & > form input {
-  //   width: 24px;
-  //   height: 24px;
-  //   opacity: 0;
-  //   position: absolute;
-
-  //   @include desk {
-  //     width: 24px;
-  //     height: 24px;
-  //   }
-  // }
 
   & > form > label:not(:last-child) {
     margin-bottom: 24px;
@@ -923,18 +889,6 @@
   }
 }
 
-// #input-0::after {
-//   content: '';
-//   width: 40px;
-//   height: 5px;
-//   color: #086beb;
-//   background-color: #9dd91c;
-//   border: 1px solid #e1e4e8;
-//   display: block;
-//   margin-left: 16px;
-//   margin-right: 16px;
-// }
-
 .price-slider-btn {
   @extend .btn;
   margin: 24px auto 16px;
@@ -984,4 +938,33 @@
   & .noUi-handle::after {
     display: none;
   }
+}
+
+.old-price {
+  position: relative;
+  padding: 5px 12px;
+  font-family: $secondaryFont;
+  // @include font(400, 14px, 20px, none);
+}
+
+.old-price::after {
+  content: '';
+  width: 92%;
+  height: 2px;
+  position: absolute;
+  background-color: getColor('gray-header');
+  top: 52%;
+  left: 4%;
+
+  // @include desk {
+  //   top: 25px;
+  //   left: 3%;
+  // }
+}
+
+.new-price {
+  padding: 2px 8px;
+  // @include font(700, 18px, 26px, none);
+  color: getColor('grey-header');
+  background-color: getColor('yellow');
 }

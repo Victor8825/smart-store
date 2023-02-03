@@ -2,6 +2,8 @@ const openModalBtn = document.querySelector('.button-search');
 const modalWindowOverlay = document.querySelector('.modal-overlay');
 const closeModalBtn = document.querySelector('.modal_close-btn');
 const body = document.body;
+const swiper = document.querySelector('.swiper');
+// console.log(swiper);
 
 const showModalWindow = () => {
   if (modalWindowOverlay) {
@@ -10,6 +12,7 @@ const showModalWindow = () => {
     closeModalBtn.addEventListener('click', hideModalWindow);
     modalWindowOverlay.addEventListener('click', hideModalWindowOnBlur);
     document.addEventListener('keydown', onEscClick);
+    // console.log(swiper);
   }
 };
 //Remove all the eventListeners
@@ -24,7 +27,8 @@ const removeAllEventListeners = () => {
 const hideModalWindow = () => {
   modalWindowOverlay.classList.add('visually-hidden');
   body.style.overflow = 'auto';
-  removeAllEventListeners();
+  swiper.autoplay.resume();
+  // removeAllEventListeners();
 };
 
 //Hide modal when clicking on overlay

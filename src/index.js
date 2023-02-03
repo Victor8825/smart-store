@@ -10,4 +10,6 @@ import './js/all-products-modal';
 
 import './js/range-slider';
 
+import './js/product-images-slider';
+
 // import './js/all-products-resize';

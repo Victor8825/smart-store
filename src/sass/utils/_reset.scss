@@ -13,7 +13,7 @@ body {
   }
 }
 
-.overflow-hidden body {
+.overflow-hidden {
   overflow: hidden;
 
   @include desk {
@@ -53,4 +53,12 @@ img {
   // max-width: 100%;
   width: 100%;
   height: auto;
+}
+
+use {
+  pointer-events: none;
+}
+
+svg {
+  pointer-events: none;
 }

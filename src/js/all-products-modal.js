@@ -17,6 +17,9 @@ const onEscClick = event => {
 };
 
 const openFiltersMenu = () => {
+  if (filtersMenuRef.classList.contains('inactive', 'innactive')) {
+    filtersMenuRef.classList.remove('inactive', 'innactive');
+  }
   filtersMenuRef.classList.add('active');
   document.addEventListener('keydown', onEscClick);
   closeModalBtnRef &&
@@ -26,6 +29,7 @@ const openFiltersMenu = () => {
 
 const closeFiltersMenu = () => {
   filtersMenuRef.classList.remove('active');
+  filtersMenuRef.classList.add('inactive', 'innactive');
   document.removeEventListener('keydown', onEscClick);
   closeModalBtnRef &&
     closeModalBtnRef.removeEventListener('click', closeFiltersMenu);

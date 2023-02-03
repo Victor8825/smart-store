@@ -1,7 +1,9 @@
 //open-close dropdown-menu
 const sectionAllProductsRef = document.querySelector('.all-products');
+// const sectionProductCardRef = document.querySelector('.product-card');
+const itemDetailsRef = document.getElementById('item-details'); //!
 
-sectionAllProductsRef &&
+if (sectionAllProductsRef || itemDetailsRef) {
   document.addEventListener('click', e => {
     const isDropDownBtn = e.target.matches('[data-dropdown-btn]');
     const currentDropdown = isDropDownBtn
@@ -19,8 +21,21 @@ sectionAllProductsRef &&
           dropdown_btn.classList.remove('dropdown-btn--active');
       });
 
+    document
+      .querySelectorAll('[data-dropdown-btn].dropdown-btn--product-active')
+      .forEach(dropdown_btn => {
+        if (dropdown_btn !== e.target)
+          dropdown_btn.classList.remove('dropdown-btn--product-active'); //!
+      });
+
     if (currentDropdown) {
       currentDropdown.classList.toggle('active');
       e.target.classList.toggle('dropdown-btn--active');
     }
+
+    if (currentDropdown && currentDropdown.parentNode === itemDetailsRef) {
+      //!
+      e.target.classList.toggle('dropdown-btn--product-active');
+    }
   });
+}
