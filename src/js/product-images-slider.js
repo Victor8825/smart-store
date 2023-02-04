@@ -49,11 +49,11 @@ const swiper = new Swiper('.image-slider', {
   },
 
   //autoPLay
-  autoplay: {
-    delay: 3000,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   pauseOnMouseEnter: true,
+  //   disableOnInteraction: false,
+  // },
 
   // If we need pagination
   pagination: {

@@ -432,40 +432,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 12px;
+}
 
-  & > span {
+.gallery-item {
+  span {
     display: block;
     text-align: center;
     @include font(700, 18px, 26px, none);
   }
 
-  & span:first-child::after {
-    content: '';
-    width: 80%;
-    height: 1px;
-    position: absolute;
-    background-color: getColor('gray-header');
-    top: 15px;
-    left: 10%;
-    //     right: 11px;
+  span.old-price {
+    position: relative;
+    padding: 5px 12px;
+    font-family: $secondaryFont;
+    @include font(400, 14px, 20px, none);
   }
 
-  // & span:first-child::after {
-  //   content: '';
-  //   width: 80%;
-  //   height: 1px;
-  //   position: absolute;
-  //   background-color: getColor('gray-header');
-  //   top: 15px;
-  //   left: 10%;
-  // }
+  span.old-price::after {
+    content: '';
+    width: 92%;
+    height: 2px;
+    position: absolute;
+    background-color: getColor('gray-header');
+    top: 52%;
+    left: 4%;
+  }
 
-  // & span:last-child {
-  //   padding: 2px 8px;
-  //   @include font(700, 18px, 26px, none);
-  //   color: getColor('grey-header');
-  //   background-color: getColor('yellow');
-  // }
+  span.new-price {
+    padding: 2px 8px;
+    color: getColor('grey-header');
+    background-color: getColor('yellow');
+  }
 }
 
 .gallery-item-button-thumb {
@@ -993,33 +991,4 @@
   & .noUi-handle::after {
     display: none;
   }
-}
-
-.old-price {
-  position: relative;
-  padding: 5px 12px;
-  font-family: $secondaryFont;
-  // @include font(400, 14px, 20px, none);
-}
-
-.old-price::after {
-  content: '';
-  width: 92%;
-  height: 2px;
-  position: absolute;
-  background-color: getColor('gray-header');
-  top: 52%;
-  left: 4%;
-
-  // @include desk {
-  //   top: 25px;
-  //   left: 3%;
-  // }
-}
-
-.new-price {
-  padding: 2px 8px;
-  // @include font(700, 18px, 26px, none);
-  color: getColor('grey-header');
-  background-color: getColor('yellow');
 }
