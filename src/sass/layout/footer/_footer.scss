@@ -116,7 +116,7 @@
 
 .newdrop__item {
   padding: 8px 12px;
-  width: 100%;
+  width: auto;
   text-align: center;
 
   @include desk {
@@ -147,7 +147,7 @@
 
 .assortment-list__item {
   padding: 8px 12px;
-  width: 100%;
+  width: auto;
   text-align: center;
 
   @include desk {
@@ -175,7 +175,7 @@
 
 .about-list__item {
   padding: 8px 12px;
-  width: 100%;
+  width: auto;
   text-align: center;
 
   @include desk {

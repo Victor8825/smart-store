@@ -7,10 +7,15 @@ body {
   color: getColor('black');
   background-color: getColor('background');
   min-height: 100vh;
+  -webkit-tap-highlight-color: rgba($color: #0e1012, $alpha: 0.1);
 
   @include desk {
     height: 100vh;
   }
+}
+
+body.show {
+  overflow: hidden;
 }
 
 .overflow-hidden {
@@ -61,4 +66,9 @@ use {
 
 svg {
   pointer-events: none;
+}
+
+button {
+  padding-left: 0;
+  padding-right: 0;
 }

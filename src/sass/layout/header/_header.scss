@@ -35,6 +35,8 @@
 
   & > li {
     @include desk {
+      display: flex;
+      align-items: center;
       padding-left: 12px;
       padding-right: 12px;
     }
@@ -66,6 +68,8 @@
 
   & > li {
     @include desk {
+      display: flex;
+      align-items: center;
       padding-left: 12px;
       padding-right: 12px;
     }
@@ -124,4 +128,246 @@
 .link-header--inactive {
   padding-bottom: 5px;
   padding-top: 5px;
+}
+
+//--burger-menu styles
+
+.burger {
+  @include font(500, 16px, 24px, none);
+  background-color: rgba(14, 16, 18, 1);
+  position: fixed;
+  z-index: 5;
+  overflow: auto;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left $trans-time $cubic;
+
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'burger-header__close-btn burger__header-nav'
+    'burger-main__logo burger-menu';
+
+  & > * {
+    background-color: getColor('yellow-bg');
+  }
+
+  svg {
+    pointer-events: all;
+  }
+}
+
+@include till_desk {
+  .burger.active {
+    left: 0;
+  }
+}
+
+.burger-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(14, 16, 18, 1);
+}
+
+.burger-header__close-btn {
+  @extend .btn;
+  pointer-events: all;
+  stroke: currentColor;
+  padding: 14px 16px;
+
+  grid-area: burger-header__close-btn;
+}
+
+.burger__header-nav {
+  flex: 1 1 auto;
+  padding-left: 6px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  grid-area: burger__header-nav;
+
+  button {
+    @extend .btn;
+    @include font(500, 16px, 24px, none);
+    color: getColor('black');
+    gap: 12px;
+  }
+}
+
+.burger__go-back-btn {
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.burger-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger-main__logo {
+  position: relative;
+  grid-area: burger-main__logo;
+  p {
+    position: absolute;
+    bottom: 5px;
+    left: 16px;
+    @include font(700, 20px, 28px, none);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(-180deg);
+  }
+}
+
+.burger-menu {
+  grid-area: burger-menu;
+  position: relative;
+}
+
+.burger-menu__item {
+  padding: 16px 16px 16px 20px;
+  border-bottom: 1px solid #0e1012;
+}
+
+.burger-menu-item__flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-chevrone--burger-menu {
+  transform: rotate(-90deg);
+}
+
+.icon-search--burger-menu {
+  stroke-width: 2px;
+}
+
+.icon-chevrone--catalog {
+  pointer-events: all;
+}
+
+.burger-sub-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  & > li {
+    background-color: getColor('yellow-bg');
+  }
+}
+
+.burger-sub-menu--catalog {
+  display: none;
+}
+
+.burger-sub-menu--services {
+  display: none;
+}
+
+.burger-sub-menu__item {
+  position: relative;
+}
+
+.sub-sub-menu__list {
+  position: absolute;
+  padding: 16px 8px 0 12px;
+  top: 100%;
+  left: 100%;
+  transition: all $trans-time $cubic;
+
+  & > li:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+
+.burger-sub-menu__item.active > .sub-sub-menu__list {
+  position: static;
+  opacity: 1;
+}
+
+//burger-sub-menu--search styles
+.burger-sub-menu--search {
+  background-color: getColor('yellow-bg');
+  display: none;
+}
+.show {
+}
+
+.burger-search-form {
+  padding: 16px 16px 16px 20px;
+  border-bottom: 1px solid #0e1012;
+  position: relative;
+}
+
+.burger-search-form-input {
+  @include font(500, 16px, 24px, none);
+  color: getColor('black');
+  border: none;
+  width: 100%;
+  background-color: getColor('yellow-bg');
+
+  &::placeholder {
+    @include font(500, 16px, 24px, none);
+    color: getColor('black');
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.burger-search-form__btn {
+  @extend .btn;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.burger-search__list {
+  width: 100%;
+}
+
+.burger-search__item-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 16px;
+
+  img {
+    object-fit: cover;
+    min-height: 110px;
+    max-width: 80px;
+    // object-fit: contain;
+  }
+}
+
+.burger-search__item-info {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  @include font(700, 16px, 24px, none);
+
+  p {
+    font-family: $secondaryFont;
+    @include font(400, 12px, 20px, none);
+  }
+}
+
+.burger-not-found-notification {
+  display: none;
+  margin-top: 16px;
+  margin-left: 20px;
+  font-family: $secondaryFont;
+  @include font(400, 16px, 24px, none);
 }
