@@ -1,9 +1,33 @@
 const sectionBurger = document.querySelector('.burger');
+const openBurgerMenuBtn = document.querySelector('.button-burger');
+const closeBurgerMenuBtn = document.querySelector('.burger-header__close-btn');
+const burgerMenuRef = document.querySelector('.burger');
+const burgerBackBtnRef = document.querySelector('.burger__go-back-btn');
 
+const burgerBackBtnHandler = () => {
+  document.querySelectorAll('.burger-sub-menu').forEach(el => el.classList.remove('active'));
+  document.querySelector('.burger-sub-menu--main').classList.add('active');
+  burgerBackBtnRef.classList.add('visually-hidden');
+}
 
 window.addEventListener('load', () => {
   //dropdown menu open close within catalog list
   if (sectionBurger) {
+    openBurgerMenuBtn.addEventListener('click', () => {
+      burgerMenuRef.classList.toggle('active');
+      document.body.classList.toggle('show');
+      // setTimeout(()=>{}, 300);
+      document.querySelector('.burger-sub-menu--main').classList.add('active');
+    });
+    
+    closeBurgerMenuBtn &&
+      closeBurgerMenuBtn.addEventListener('click', () => {
+        burgerMenuRef.classList.toggle('active');
+        document.body.classList.toggle('show');
+        burgerBackBtnHandler();
+        // document.querySelector('.burger-sub-menu--main').classList.remove('active');
+      }); 
+
     const catalogSubMenuArrows = document.querySelectorAll('.icon-chevrone--catalog');
     if (catalogSubMenuArrows.length > 0) {
       catalogSubMenuArrows.forEach(arrow => {
@@ -23,23 +47,25 @@ window.addEventListener('load', () => {
         // console.log(e.target.dataset['submenu']);
         switch (e.target.dataset['submenu']) {
           case 'catalog':
+            // document.querySelector('.burger-sub-menu--catalog ').classList.remove('visually-hidden');
             document.querySelector('.burger-sub-menu--catalog ').classList.add('active');
             break;
           case 'service':
+            // document.querySelector('.burger-sub-menu--services ').classList.remove('visually-hidden');
             document.querySelector('.burger-sub-menu--services ').classList.add('active');
             break;
           case 'search':
+            // document.querySelector('.burger-sub-menu--search ').classList.remove('visually-hidden');
             document.querySelector('.burger-sub-menu--search ').classList.add('active');
             break;
         }
         document.querySelector('.burger-sub-menu--main').classList.remove('active');
+        // document.querySelector('.burger-sub-menu--main').classList.add('visually-hidden');
+        burgerBackBtnRef.classList.remove('visually-hidden');
       });
     });
 
     // burger back btn handler
-    document.querySelector('.burger__go-back-btn').addEventListener('click', () => {
-      document.querySelectorAll('.burger-sub-menu').forEach(el => el.classList.remove('active'));
-      document.querySelector('.burger-sub-menu--main').classList.add('active');
-    })
+    burgerBackBtnRef.addEventListener('click', burgerBackBtnHandler)
   }
 })
