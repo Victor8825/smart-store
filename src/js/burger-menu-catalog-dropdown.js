@@ -16,8 +16,7 @@ window.addEventListener('load', () => {
     openBurgerMenuBtn.addEventListener('click', () => {
       burgerMenuRef.classList.toggle('active');
       document.body.classList.toggle('show');
-      // setTimeout(()=>{}, 300);
-      document.querySelector('.burger-sub-menu--main').classList.add('active');
+      // document.querySelector('.burger-sub-menu--main').classList.add('active');
     });
     
     closeBurgerMenuBtn &&
@@ -28,6 +27,27 @@ window.addEventListener('load', () => {
         // document.querySelector('.burger-sub-menu--main').classList.remove('active');
       }); 
 
+    //open-close embedded menues inside burger-menu div
+    const menuArrows = document.querySelectorAll('[data-burger-icon-chevrone]');
+    menuArrows.forEach(menuArrow => {
+      menuArrow.addEventListener('click', e => {
+        switch (e.target.dataset['submenu']) {
+          case 'catalog':
+            document.querySelector('.burger-sub-menu--catalog ').classList.add('active');
+            break;
+          case 'service':
+            document.querySelector('.burger-sub-menu--services ').classList.add('active');
+            break;
+          case 'search':
+            document.querySelector('.burger-sub-menu--search ').classList.add('active');
+            break;
+        }
+        document.querySelector('.burger-sub-menu--main').classList.remove('active');
+        burgerBackBtnRef.classList.remove('visually-hidden');
+      });
+    });
+
+    // category types open links
     const catalogSubMenuArrows = document.querySelectorAll('.icon-chevrone--catalog');
     if (catalogSubMenuArrows.length > 0) {
       catalogSubMenuArrows.forEach(arrow => {
@@ -39,31 +59,6 @@ window.addEventListener('load', () => {
         });
       });
     };
-
-    //open-close embedded menues inside burger-menu div
-    const menuArrows = document.querySelectorAll('[data-burger-icon-chevrone]');
-    menuArrows.forEach(menuArrow => {
-      menuArrow.addEventListener('click', e => {
-        // console.log(e.target.dataset['submenu']);
-        switch (e.target.dataset['submenu']) {
-          case 'catalog':
-            // document.querySelector('.burger-sub-menu--catalog ').classList.remove('visually-hidden');
-            document.querySelector('.burger-sub-menu--catalog ').classList.add('active');
-            break;
-          case 'service':
-            // document.querySelector('.burger-sub-menu--services ').classList.remove('visually-hidden');
-            document.querySelector('.burger-sub-menu--services ').classList.add('active');
-            break;
-          case 'search':
-            // document.querySelector('.burger-sub-menu--search ').classList.remove('visually-hidden');
-            document.querySelector('.burger-sub-menu--search ').classList.add('active');
-            break;
-        }
-        document.querySelector('.burger-sub-menu--main').classList.remove('active');
-        // document.querySelector('.burger-sub-menu--main').classList.add('visually-hidden');
-        burgerBackBtnRef.classList.remove('visually-hidden');
-      });
-    });
 
     // burger back btn handler
     burgerBackBtnRef.addEventListener('click', burgerBackBtnHandler)
