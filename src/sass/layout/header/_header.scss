@@ -257,55 +257,73 @@
 }
 
 .burger-sub-menu {
+  // animation: burgerMenuFadeOut $trans-time $cubic;
+  // -webkit-animation: burgerMenuFadeOut $trans-time $cubic;
+
   width: 100%;
   display: none;
   position: inherit;
 
-  animation: burgerMenuFadeOut $trans-time $cubic;
+  transition: right $trans-time $cubic;
+  -webkit-transition: right $trans-time $cubic;
+  -moz-transition: right $trans-time $cubic;
+  -ms-transition: right $trans-time $cubic;
+  -o-transition: right $trans-time $cubic;
 
   & > li {
     background-color: getColor('yellow-bg');
-    transition: max-height .3s $cubic;
+    transition: max-height $trans-time $cubic;
     max-height: 57px;
+    -webkit-transition: max-height $trans-time $cubic;
+    -moz-transition: max-height $trans-time $cubic;
+    -ms-transition: max-height $trans-time $cubic;
+    -o-transition: max-height $trans-time $cubic;
+}
 
-  }
   & > li.active {
     max-height: 1000px;
   }
 
   & > li.active .icon-chevrone--catalog {
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
   }
 
 }
 
-.burger-sub-menu.active {
+.burger-sub-menu.activating {
+  animation: burgerMenuFadeIn 0s linear;
+  -webkit-animation: burgerMenuFadeIn 0s linear;
+
+  right: -100%;
   display: block;
-  animation: burgerMenuFadeIn $trans-time $cubic;
+}
+
+.burger-sub-menu.active {
+  right: 0;
+  display: block;
 }
 
 @keyframes burgerMenuFadeIn {
   from {
     opacity: 0;
-    transform: translateX(100%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
-@keyframes burgerMenuFadeOut {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    display: none;
-    transform: translateX(100%);
-  }
-}
+// @keyframes burgerMenuFadeOut {
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }
 
 .sub-sub-menu__list {
   overflow-y: hidden;
