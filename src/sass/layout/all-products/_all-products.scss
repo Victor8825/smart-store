@@ -634,8 +634,7 @@
   top: 0;
   left: 0;
   background: getColor('yellow-bg');
-  transition: opacity $trans-time $cubic, visibility $trans-time $cubic,
-    background-color $trans-time $cubic;
+  transition: opacity $trans-time $cubic, visibility $trans-time $cubic, background-color $trans-time $cubic;
 }
 .all-products-modal {
   z-index: 999;
@@ -650,8 +649,7 @@
 
   // box-shadow: 0 28px 42px rgba(0, 0, 0, 0.38), 0 20px 20px rgba(0, 0, 0, 0.33);
 
-  transition: transform 600ms $cubic, opacity 600ms $cubic,
-    visibility 800ms $cubic, box-shadow 600ms $cubic;
+  transition: transform 600ms $cubic, opacity 600ms $cubic, visibility 800ms $cubic, box-shadow 600ms $cubic;
 }
 
 .all-products-modal__header {

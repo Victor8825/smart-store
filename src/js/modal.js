@@ -38,7 +38,7 @@ const hideModalWindowOnBlur = e => {
   }
 };
 
-openModalBtn && openModalBtn.addEventListener('click', showModalWindow);
+// openModalBtn && openModalBtn.addEventListener('click', showModalWindow);
 
 //Hide modal when clicking on "Esc"
 const onEscClick = event => {

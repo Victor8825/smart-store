@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
       });
 
     //open-close embedded menues inside burger-menu div
-    const menuArrows = document.querySelectorAll('[data-burger-icon-chevrone]');
+    const menuArrows = document.querySelectorAll('[data-submenu]');
     menuArrows.forEach(menuArrow => {
       menuArrow.addEventListener('click', e => {
         const el = document.querySelector(`.burger-sub-menu--${e.target.dataset['submenu']}`);

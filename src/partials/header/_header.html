@@ -8,14 +8,12 @@
       </button>
       <ul class="menu-left">
         <li><a class="decorative-link--header" href="#">NEW DROP</a></li>
-        <li>
-          <a href="./all-products.html" class="decorative-link--header" href="#"
-            >Каталог</a
-          >
-          <svg class="icon-chevrone-down--all-products" width="16" height="16">
-            <use
-              href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"
-            ></use>
+        <li data-desk-dropdown-btn="catalog">
+          <button type="button" href="./all-products.html" class="header-menu-btn decorative-link--header" href="#">
+            Каталог
+          </button>
+          <svg class="icon-chevrone-down--all-products icon-chevrone-down--only-header" width="16" height="16">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
           </svg>
         </li>
         <li><a class="decorative-link--header" href="#">Знижки</a></li>
@@ -25,7 +23,7 @@
       <img src="./img/icons/logo-desk-2x.png" class="logo" />
     </div>
     <div class="nav-right">
-      <button type="button" class="button-search btn">
+      <button data-desk-dropdown-btn="search" type="button" class="button-search">
         <svg class="icon-search" width="32" height="32">
           <use href="./img/icons/symbol-defs-optimized.svg#icon-search"></use>
         </svg>
@@ -38,28 +36,139 @@
         </a>
       </button>
       <ul class="menu-right">
-        <li>
-          <a class="decorative-link--header" href="#">Сервіс </a>
-          <svg class="icon-chevrone-down" width="16" height="16">
-            <use
-              href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"
-            ></use>
+        <li data-desk-dropdown-btn="services">
+          <button type="button" class="header-menu-btn decorative-link--header" href="#">Сервіс</button>
+          <svg class="icon-chevrone-down icon-chevrone-down--only-header" width="16" height="16">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
           </svg>
         </li>
-        <li>
+        <!-- <li>
           <a class="decorative-link--header" href="#">Укр </a>
           <svg class="icon-chevrone-down" width="16" height="16">
-            <use
-              href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"
-            ></use>
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
           </svg>
-        </li>
-        <li>
-          <a class="decorative-link--header" href="./login.html">Увійти</a>
+        </li> -->
+        <li data-desk-dropdown-btn="account">
+          <button type="button" class="header-menu-btn decorative-link--header" href="#">Увійти</button>
         </li>
       </ul>
     </div>
   </nav>
-  <!--burger menu-->
+  <!--dropdown menu catalog-->
+  <div data-dropdown-menu class="desk-dropdown-catalog visually-hidden">
+    <ul class="desk-dropdown-catalog-menu">
+      <li data-catalog-item><a data-catalog-link="women" class="decorative-link--header" href="#">Жіноче</a></li>
+      <li data-catalog-item><a data-catalog-link="men" class="decorative-link--header" href="#">Чоловіче</a></li>
+      <li data-catalog-item><a data-catalog-link="children" class="decorative-link--header" href="#">Дитяче</a></li>
+      <li data-catalog-item><a data-catalog-link="" class="decorative-link--header" href="#">Сумки</a></li>
+      <li data-catalog-item><a data-catalog-link="" class="decorative-link--header" href="#">Аксесуари</a></li>
+      <li data-catalog-item><a data-catalog-link="" class="decorative-link--header" href="#">Ювелірні вироби</a></li>
+      <li data-catalog-item><a data-catalog-link="" class="decorative-link--header" href="#">Купувати все</a></li>
+    </ul>
+    <!-- <ul class="desk-dropdown-catalog-submenu"></ul> -->
+    <!-- <ul
+      style="color: rgb(255, 183, 0)"
+      class="desk-dropdown-catalog-submenu desk-dropdown-catalog-submenu--men visually-hidden"
+    >
+      <li><a class="decorative-link--header" href="">Верхній одяг</a></li>
+      <li><a class="decorative-link--header" href="">Костюми</a></li>
+      <li><a class="decorative-link--header" href="">Футболки</a></li>
+      <li><a class="decorative-link--header" href="">Штани</a></li>
+      <li><a class="decorative-link--header" href="">Взуття</a></li>
+      <li><a class="decorative-link--header" href="">Спідня білизна</a></li>
+    </ul>
+    <ul
+      style="color: aqua"
+      class="desk-dropdown-catalog-submenu desk-dropdown-catalog-submenu--children visually-hidden"
+    >
+      <li><a class="decorative-link--header" href="">Верхній одяг</a></li>
+      <li><a class="decorative-link--header" href="">Костюми</a></li>
+      <li><a class="decorative-link--header" href="">Футболки</a></li>
+      <li><a class="decorative-link--header" href="">Штани</a></li>
+      <li><a class="decorative-link--header" href="">Сукні</a></li>
+      <li><a class="decorative-link--header" href="">Взуття</a></li>
+    </ul> -->
+  </div>
+  <!--dropdown menu services-->
+  <ul data-dropdown-menu class="desk-dropdown-services visually-hidden">
+    <li><a class="decorative-link--header" href="#">Про нас</a></li>
+    <li><a class="decorative-link--header" href="#">Контакти</a></li>
+    <li><a class="decorative-link--header" href="#">Оплата</a></li>
+    <li><a class="decorative-link--header" href="#">Доставка</a></li>
+    <li><a class="decorative-link--header" href="#">Повернення</a></li>
+    <li><a class="decorative-link--header" href="#">Договір публічної оферти</a></li>
+    <li><a class="decorative-link--header" href="#">Питання та відповіді</a></li>
+  </ul>
+  <!--dropdown menu account-->
+  <ul data-dropdown-menu class="desk-dropdown-account visually-hidden">
+    <li><a class="decorative-link--header" href="#">Мій кабінет</a></li>
+    <li><a class="decorative-link--header" href="#">Мої замовлення</a></li>
+    <li><a class="decorative-link--header" href="#">Історія покупок</a></li>
+    <li><a class="decorative-link--header" href="#">Адреси</a></li>
+    <li><a class="decorative-link--header" href="#">Вийти</a></li>
+  </ul>
+  <!--dropdown menu search-->
+  <div data-dropdown-menu class="desk-dropdown-search visually-hidden">
+    <form action="" class="desk-search__form">
+      <input type="text" class="desk-search__input" placeholder="Пошук..." autofocus maxlength="30" /><button
+        type="button"
+        class="desk-search__btn"
+      >
+        <svg class="desk-search__icon-close" width="24" height="24">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-close"></use>
+        </svg>
+      </button>
+    </form>
+    <p>Нічого не знайдено</p>
+    <ul class="burger-search__list burger-search__list--desk">
+      <li class="burger-search__item">
+        <div class="burger-search__item-wrap">
+          <img src="./img/photo_1.jpg" alt="" />
+          <div class="burger-search__item-info">
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <p>Доставка з м. Кропивницький</p>
+            <span>275 грн.</span>
+          </div>
+        </div>
+      </li>
+      <li class="burger-search__item">
+        <div class="burger-search__item-wrap">
+          <img src="./img/photo_2.jpg" alt="" />
+          <div class="burger-search__item-info">
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <p>Доставка з м. Кропивницький</p>
+            <span>275 грн.</span>
+          </div>
+        </div>
+      </li>
+      <li class="burger-search__item">
+        <div class="burger-search__item-wrap">
+          <img src="./img/photo_3.jpg" alt="" />
+          <div class="burger-search__item-info">
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <p>Доставка з м. Кропивницький</p>
+            <span>275 грн.</span>
+          </div>
+        </div>
+      </li>
+      <li class="burger-search__item">
+        <div class="burger-search__item-wrap">
+          <img src="./img/photo_3.jpg" alt="" />
+          <div class="burger-search__item-info">
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <p>Доставка з м. Кропивницький</p>
+            <span>275 грн.</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="desk-search__show-more-btn">
+      Дивитись усі результати
+      <svg width="16" height="16">
+        <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"></use>
+      </svg>
+    </button>
+  </div>
 </header>
+<!--burger menu-->
 <include src="partials/burger-menu/burger-menu.html"></include>
