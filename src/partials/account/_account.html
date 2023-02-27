@@ -1,0 +1,337 @@
+<section class="account responsive-container">
+  <!--bread crumbs-->
+  <div class="bread-crumbs--account">
+    <svg class="arrow-left" width="24" height="24">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-left"></use>
+    </svg>
+    <p>Головна</p>
+    <svg class="arrow-right" width="16" height="16">
+      <use href="./img/icons/symbol-defs-optimized.svg#icon-arrow-right"></use>
+    </svg>
+    <p class="bread-crumbs--account__desktop-text">Акаунт</p>
+  </div>
+  <!--account__choose-categories-btn-->
+  <div data-dropdown class="account__categories-dropdown-wrap">
+    <button data-dropdown-btn class="account__choose-categories-btn">
+      Акаунт: Мій кабінет
+      <svg class="icon-chevrone-down--account" width="16" height="16">
+        <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+      </svg>
+    </button>
+    <!--account__categories-dropdowm-menu-->
+    <ul class="account__categories-dropdown-menu">
+      <li data-account-category-button="privacy-settings">
+        <a class="account__category-link active" href="#">Мій кабінет</a>
+      </li>
+      <li data-account-category-button="my-orders"><a class="account__category-link" href="#">Мої замовлення</a></li>
+      <li data-account-category-button="my-orders-history">
+        <a class="account__category-link" href="#">Історія покупок</a>
+      </li>
+      <li data-account-category-button="address-form"><a class="account__category-link" href="#">Адреси</a></li>
+      <li data-account-category-button="address-form">
+        <a class="account__category-link" href="#">Вийти з акаунту</a>
+      </li>
+    </ul>
+  </div>
+  <div class="account__content-wrap">
+    <!--account__notification-->
+    <div class="account__notification">
+      <svg width="16" height="16">
+        <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
+      </svg>
+      <p>some text</p>
+    </div>
+    <!--account__privacy-settings-form-->
+    <form data-account-category="privacy-settings" action="" class="account__privacy-settings-form">
+      <div class="account__privacy-settings-form-input-wrap">
+        <label>Імʼя<input class="account__privacy-settings-form-input" type="text" placeholder="" /></label>
+        <label>Прізвище<input class="account__privacy-settings-form-input" type="text" placeholder="" /></label>
+      </div>
+      <div class="account__privacy-settings-form-input-wrap">
+        <label
+          >Пошта <span>*</span><input class="account__privacy-settings-form-input" type="text" placeholder=""
+        /></label>
+        <label
+          >Телефон <span>*</span><input class="account__privacy-settings-form-input" type="number" placeholder=""
+        /></label>
+      </div>
+      <div class="account__privacy-settings-form-btn-wrap">
+        <button type="submit">Редагувати</button>
+        <button type="submit">Зберегти</button>
+        <button type="submit">Скасувати зміни</button>
+      </div>
+    </form>
+    <!--account__my-orders-->
+    <!-- <div class="account__notification account__notification--my-orders">
+      <svg width="16" height="16">
+        <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
+      </svg>
+      <p>Ви не розміщували у нас жодних замовлень. Коли ви це зробите, їхній статус з’явиться на цій сторінці.</p>
+    </div> -->
+    <p class="account__orders-history-label">* за остані 3 місяця</p>
+    <ul data-account-category="my-orders" class="account__my-orders-list">
+      <li class="account__my-orders-item active">
+        <div class="account__my-orders-img-info-wrap">
+          <img src="./img/dress.png" alt="" />
+          <div class="account__my-orders-info-thumb">
+            <div class="account__svg-container">
+              <p>#563758395</p>
+              <svg width="32" height="32">
+                <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+              </svg>
+            </div>
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <span>275 грн.</span>
+          </div>
+        </div>
+        <ul class="account__my-orders-details-wrap">
+          <li>
+            <p>Дата: <span>19.05.2022</span></p>
+          </li>
+          <li>
+            <p>Статус оплати: <span>Сплачено</span></p>
+          </li>
+          <li>
+            <p>Статус замовлення: <span>В обробці</span></p>
+          </li>
+        </ul>
+      </li>
+      <li class="account__my-orders-item">
+        <div class="account__my-orders-img-info-wrap">
+          <img src="./img/dress.png" alt="" />
+          <div class="account__my-orders-info-thumb">
+            <div class="account__svg-container">
+              <p>#563758395</p>
+              <svg width="32" height="32">
+                <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+              </svg>
+            </div>
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <span>275 грн.</span>
+          </div>
+        </div>
+        <ul class="account__my-orders-details-wrap visually-hidden">
+          <li>
+            <p>Дата: <span>19.05.2022</span></p>
+          </li>
+          <li>
+            <p>Статус оплати: <span>Сплачено</span></p>
+          </li>
+          <li>
+            <p>Статус замовлення: <span>В обробці</span></p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!--account__my-orders-table-->
+    <table data-account-category="my-orders" class="account__my-orders-table">
+      <thead>
+        <tr>
+          <td>Замовлення</td>
+          <td></td>
+          <td>Номер замовлення</td>
+          <td>Дата</td>
+          <td>Статус сплати</td>
+          <td>Статус замовлення</td>
+          <td>Ціна</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="./img/hz.png" alt="" />
+          </td>
+          <th>Кардиган PRETTYLITTLETHING</th>
+          <td>563758395</td>
+          <td>19.05.2022</td>
+          <td>Сплачено</td>
+          <td>В обробці</td>
+          <td><span>275 грн.</span></td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./img/hz.png" alt="" />
+          </td>
+          <th>Кардиган PRETTYLITTLETHING</th>
+          <td>358360360</td>
+          <td>18.05.2022</td>
+          <td>Відхилено</td>
+          <td>Не опрацювано</td>
+          <td><span>275 грн.</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <!--account__orders-history-->
+    <!-- <div class="account__notification account__notification--orders-history">
+      <svg width="16" height="16">
+        <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
+      </svg>
+      <p>Історія буде відображатися як тільки Ви зробите першу покупку на сайті.</p>
+    </div> -->
+
+    <ul data-account-category="my-orders-history" class="account__my-orders-list account__orders-history-list">
+      <li class="account__my-orders-item">
+        <div class="account__my-orders-img-info-wrap">
+          <img src="./img/dress.png" alt="" />
+          <div class="account__my-orders-info-thumb">
+            <div class="account__svg-container">
+              <p>#563758395</p>
+              <svg width="32" height="32">
+                <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+              </svg>
+            </div>
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <span>275 грн.</span>
+          </div>
+        </div>
+        <ul class="account__my-orders-details-wrap">
+          <li>
+            <p>Дата: <span>19.05.2022</span></p>
+          </li>
+        </ul>
+      </li>
+      <li class="account__my-orders-item">
+        <div class="account__my-orders-img-info-wrap">
+          <img src="./img/dress.png" alt="" />
+          <div class="account__my-orders-info-thumb">
+            <div class="account__svg-container">
+              <p>#563758395</p>
+              <svg width="32" height="32">
+                <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+              </svg>
+            </div>
+            <h5>Кардиган PRETTYLITTLETHING</h5>
+            <span>275 грн.</span>
+          </div>
+        </div>
+        <ul class="account__my-orders-details-wrap visually-hidden">
+          <li>
+            <p>Дата: <span>19.05.2022</span></p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!--account__orders-history-table-->
+    <table data-account-category="my-orders-history" class="account__my-orders-table account__orders-history-table">
+      <thead>
+        <tr>
+          <td>Замовлення</td>
+          <td></td>
+          <td>Номер замовлення</td>
+          <td>Дата</td>
+          <td>Ціна</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="./img/hz.png" alt="" />
+          </td>
+          <th>Кардиган PRETTYLITTLETHING</th>
+          <td>563758395</td>
+          <td>19.05.2022</td>
+          <td><span>275 грн.</span></td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./img/hz.png" alt="" />
+          </td>
+          <th>Кардиган PRETTYLITTLETHING</th>
+          <td>358360360</td>
+          <td>18.05.2022</td>
+          <td><span>275 грн.</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <!--account__address-list-->
+    <ul data-account-category="my-orders-history" class="account__address-list">
+      <li class="account__address-fullfilled-card">
+        <h5>Василь Степаненко</h5>
+        <ul class="account_address-fullfilled-card-info-wrap">
+          <li>
+            <p>Телефон</p>
+            <span>+380 (50) 555 94 15</span>
+          </li>
+          <li>
+            <p>Область</p>
+            <span>Харківська область</span>
+          </li>
+          <li>
+            <p>Місто</p>
+            <span>м. Харків</span>
+          </li>
+          <li>
+            <p>Відділення Нової Пошти</p>
+            <span>№40 відділення Нової пошти, вул. Тарасівскька</span>
+          </li>
+        </ul>
+        <button account-open-modal-btn="delete-address-btn" type="submit">Видалити</button>
+        <button account-edit-address-btn="submit">Редагувати</button>
+      </li>
+      <li class="account__address-empty-card">
+        <svg width="80" height="80">
+          <use href="./img/icons/symbol-defs-optimized.svg#icon-plus"></use>
+        </svg>
+        <h5>Додати адресу</h5>
+      </li>
+    </ul>
+    <!--account__create-new-address-or-edit-current-->
+    <form data-account-category="address-form" action="" class="account__privacy-settings-form account__address-form">
+      <div class="account__privacy-settings-form-input-wrap">
+        <label
+          >Імʼя <span>*</span
+          ><input
+            class="account__privacy-settings-form-input account__privacy-settings-form-input--success"
+            type="text"
+            placeholder=""
+        /></label>
+        <label
+          >Прізвище <span>*</span
+          ><input
+            class="account__privacy-settings-form-input account__privacy-settings-form-input--failure"
+            type="text"
+            placeholder=""
+        /></label>
+        <label
+          >Телефон <span>*</span><input class="account__privacy-settings-form-input" type="number" placeholder=""
+        /></label>
+      </div>
+      <div class="account__privacy-settings-form-input-wrap">
+        <label
+          >Область <span>*</span><input class="account__privacy-settings-form-input" type="text" placeholder="" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+        </label>
+        <label
+          >Місто <span>*</span><input class="account__privacy-settings-form-input" type="text" placeholder="" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+        </label>
+        <label
+          >Відділення Нової Пошти <span>*</span
+          ><input class="account__privacy-settings-form-input" type="text" placeholder="" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="account__privacy-settings-form-btn-wrap">
+        <button account-open-modal-btn="save-address-changes" type="submit">Зберегти</button>
+        <button type="submit">Скасувати зміни</button>
+      </div>
+    </form>
+  </div>
+  <!-- Modal -->
+  <div class="modal-overlay visually-hidden">
+    <div class="modal">
+      <h4>Видалення адреси</h4>
+      <p>Ви впевнені, що хочете видалилти адресу?</p>
+      <div class="button-wrap">
+        <button type="button" class="modal-btn modal-btn--confirm">Так</button>
+        <button type="button" class="modal-btn modal-btn--abort">Відмінити</button>
+      </div>
+    </div>
+  </div>
+</section>

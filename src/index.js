@@ -16,6 +16,8 @@ import './js/burger-menu-catalog-dropdown';
 
 import './js/desktop-menu-catalog';
 
+import './js/account-toggle-categories';
+
 // import './js/lightbox-for-fullsize-image';
 
 // import './js/all-products-resize';

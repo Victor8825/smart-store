@@ -1,9 +1,8 @@
-const openModalBtn = document.querySelector('.button-search');
+const openModalBtn = document.querySelector('[account-open-modal-btn]');
 const modalWindowOverlay = document.querySelector('.modal-overlay');
-const closeModalBtn = document.querySelector('.modal_close-btn');
+const closeModalBtn = document.querySelector('.modal-btn');
 const body = document.body;
 const swiper = document.querySelector('.swiper');
-// console.log(swiper);
 
 const showModalWindow = () => {
   if (modalWindowOverlay) {
@@ -12,7 +11,6 @@ const showModalWindow = () => {
     closeModalBtn.addEventListener('click', hideModalWindow);
     modalWindowOverlay.addEventListener('click', hideModalWindowOnBlur);
     document.addEventListener('keydown', onEscClick);
-    // console.log(swiper);
   }
 };
 //Remove all the eventListeners
@@ -27,7 +25,7 @@ const removeAllEventListeners = () => {
 const hideModalWindow = () => {
   modalWindowOverlay.classList.add('visually-hidden');
   body.style.overflow = 'auto';
-  swiper.autoplay.resume();
+  // swiper.autoplay.resume();
   // removeAllEventListeners();
 };
 
@@ -38,8 +36,6 @@ const hideModalWindowOnBlur = e => {
   }
 };
 
-// openModalBtn && openModalBtn.addEventListener('click', showModalWindow);
-
 //Hide modal when clicking on "Esc"
 const onEscClick = event => {
   if (event.code === 'Escape') {
@@ -47,3 +43,5 @@ const onEscClick = event => {
     hideModalWindow();
   }
 };
+
+openModalBtn && openModalBtn.addEventListener('click', showModalWindow);

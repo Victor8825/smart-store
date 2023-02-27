@@ -1,0 +1,516 @@
+//account section
+.account {
+  @include desk {
+    padding: 40px 72px 80px;
+  }
+}
+//bread crumbs
+.bread-crumbs--account {
+  @include font(400, 16px, 24px, none);
+  font-family: $secondaryFont;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24px 0 12px 16px;
+
+  @include desk {
+    @include font(400, 14px, 20px, none);
+    padding: 0;
+  }
+}
+
+.bread-crumbs--account__desktop-text {
+  display: none;
+
+  @include desk {
+    display: block;
+    color: getColor('gray-body');
+  }
+}
+
+//account__choose-catagories-btn
+.account__choose-categories-btn {
+  @extend .btn;
+  @include font(500, 16px, 24px, none);
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid getColor('gray-border');
+  border-bottom: 1px solid getColor('gray-border');
+  position: relative;
+  svg {
+    margin-left: 12px;
+    transition: all $trans-time $cubic;
+    stroke: getColor('black');
+    stroke-width: 2px;
+  }
+
+  @include desk {
+    display: none;
+  }
+}
+.account__categories-dropdown-wrap {
+  position: relative;
+}
+.dropdown-btn--active.account__choose-categories-btn > svg {
+  transform: rotate(180deg);
+  stroke: #ffffff;
+}
+
+.account__categories-dropdown-wrap.active .account__categories-dropdown-menu {
+  display: flex;
+}
+
+//.account__categories-dropdown-menu
+.account__categories-dropdown-menu {
+  @include font(500, 18px, 18px, none);
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  background-color: getColor('white');
+  z-index: 1;
+  border: 1px solid getColor('black');
+  border-top: none;
+  display: none;
+
+  @include desk {
+    display: flex;
+    font-family: $secondaryFont;
+    @include font(400, 18px, 26px, none);
+    padding: 28px 0 80px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: unset;
+    border: none;
+  }
+
+  li > a {
+  }
+}
+
+.account__category-link {
+  display: block;
+  padding: 8px 12px;
+
+  @include desk {
+    padding: 8px 24px;
+    border: 1px solid getColor('gray-border');
+  }
+}
+
+.account__category-link.active {
+  opacity: 0.5;
+  pointer-events: none;
+
+  @include desk {
+    opacity: 1;
+    background-color: getColor('black');
+    color: getColor('white');
+  }
+}
+
+//account__content-wrap
+.account__content-wrap {
+  padding: 24px 16px 60px;
+
+  @include desk {
+    padding: 0;
+  }
+}
+
+//account__privacy-settings-form
+.account__privacy-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 343px;
+  width: 100%;
+  margin: 0 auto;
+  @include desk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 24px 16px;
+    max-width: 856px;
+    padding: 40px;
+    border: 1px solid getColor('black');
+  }
+
+  label {
+    display: block;
+    width: inherit;
+
+    span {
+      color: red;
+    }
+  }
+}
+
+.account__privacy-settings-form-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  grid-column: 1/3;
+  @include desk {
+    grid-column: auto/auto;
+  }
+}
+
+.account__privacy-settings-form-input {
+  margin-top: 6px;
+  font-family: $secondaryFont;
+  opacity: 0.5;
+  @extend .form-input;
+  display: block;
+  width: inherit;
+}
+
+.account__privacy-settings-form-input--success {
+  opacity: 1;
+}
+
+.account__privacy-settings-form-input--failure {
+  opacity: 1;
+  border-color: getColor('red');
+}
+
+.account__privacy-settings-form-input-failure-notification {
+  font-family: $secondaryFont;
+  @include font(400, 12px, 20px, none);
+  margin-top: 4px;
+  color: getColor('red');
+}
+
+.account__privacy-settings-form-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  grid-column: 1/3;
+  margin-top: 8px;
+  @include desk {
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  button {
+    @extend .btn;
+    @include font(500, 16px, 16px, none);
+    padding: 16px;
+    border: 1px solid getColor('gray-border');
+    transition: all $trans-time $cubic;
+
+    &:hover,
+    &:focus {
+      border: 1px solid getColor('black');
+    }
+
+    &:last-child {
+      @include desk {
+        order: -1;
+      }
+    }
+  }
+}
+
+//account__notification
+.account__notification {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $secondaryFont;
+  @include font(400, 16px, 24px, none);
+  max-width: 343px;
+  width: 100%;
+  margin: 0 auto 16px auto;
+  padding: 8px 12px;
+  background-color: getColor('gray-border');
+
+  @include desk {
+    max-width: 856px;
+    margin: 0 auto 24px auto;
+  }
+
+  svg {
+    align-self: center;
+  }
+
+  p {
+    flex-shrink: 20;
+  }
+
+  svg {
+    stroke: getColor('gray-header');
+  }
+}
+
+.account__notification--success {
+  background-color: #c8f9dd;
+
+  svg {
+    stroke: #14b859;
+  }
+}
+
+.account__notification--failure {
+  background-color: #f8c8c8;
+
+  svg {
+    stroke: #eb5757;
+  }
+}
+
+//account__my-orders-mobile-styles
+.account__my-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 343px;
+  max-width: 767px;
+  width: auto;
+
+  @include desk {
+    display: none;
+  }
+}
+
+.account__my-orders-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid getColor('black');
+  padding: 12px;
+  // transition: height $trans-time $cubic;
+}
+
+.account__my-orders-item.active svg {
+  transform: rotate(180deg);
+}
+
+.account__my-orders-img-info-wrap {
+  display: flex;
+  gap: 16px;
+
+  img {
+    max-width: 105px;
+    max-height: 150px;
+  }
+}
+
+.account__my-orders-info-thumb {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  gap: 16px;
+
+  h5 {
+    flex: 1 1 100%;
+    @include font(700, 16px, 24px, none);
+  }
+
+  span {
+    @include font(700, 18px, 26px, none);
+  }
+}
+
+.account__svg-container {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-family: $secondaryFont;
+    @include font(400, 16px, 24px, none);
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    pointer-events: all;
+    stroke: getColor('black');
+    transition: all $trans-time $cubic;
+  }
+}
+
+.account__my-orders-details-wrap {
+  li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-family: $secondaryFont;
+    @include font(400, 16px, 24px, none);
+  }
+
+  span {
+    font-family: $primaryFont;
+    @include font(700, 16px, 24px, none);
+  }
+}
+
+//account__my-orders-table
+
+.account__my-orders-table {
+  width: 100%;
+  border: 1px solid getColor('black');
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 12px;
+  }
+
+  td {
+    font-family: $secondaryFont;
+    @include font(400, 16px, 24px, none);
+  }
+
+  tr {
+    border-top: 1px solid getColor('black');
+  }
+
+  img {
+    width: 105px;
+    height: 150px;
+    // border: 1px dotted red;
+  }
+
+  span {
+    font-family: $primaryFont;
+    @include font(700, 18px, 26px, none);
+  }
+
+  @include till_desk {
+    display: none;
+  }
+}
+
+//account__my-orders-history-mobile-styles
+.account__orders-history-label {
+  color: getColor('gray-body');
+  margin-bottom: 24px;
+  text-align: end;
+}
+
+//account__address
+.account__address-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24px;
+  max-width: 343px;
+
+  @include desk {
+    flex-direction: row;
+    padding: 40px 34px;
+    max-width: 856px;
+    border: 1px solid getColor('black');
+  }
+
+  & > li {
+    border: 1px solid getColor('black');
+    min-height: 320px;
+    @include desk {
+      flex: 1 1 50%;
+    }
+  }
+}
+.account__address-fullfilled-card {
+  padding: 12px;
+  background-color: getColor('yellow-bg');
+
+  @include desk {
+    padding: 40px;
+  }
+
+  h5 {
+    @include font(700, 24px, 32px, none);
+    margin-bottom: 24px;
+  }
+
+  p {
+    @include font(600, 12px, 20px, none);
+  }
+  span {
+    font-family: $secondaryFont;
+    @include font(400, 16px, 24px, none);
+  }
+
+  button {
+    @extend .btn;
+    @include font(500, 16px, 16px, none);
+    padding: 10px;
+    border: 1px solid getColor('gray-border');
+    width: 100%;
+    transition: all $trans-time $cubic;
+
+    @include desk {
+      width: auto;
+      display: inline-block;
+      // margin-right: 16px;
+    }
+  }
+
+  button:hover,
+  button:focus {
+    border: 1px solid getColor('black');
+  }
+
+  button:not(:last-child) {
+    margin-bottom: 16px;
+
+    @include desk {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.account_address-fullfilled-card-info-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 0;
+  margin-bottom: 32px;
+
+  li {
+    flex: 1 1 50%;
+  }
+}
+
+.account__address-empty-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+
+  svg {
+    // pointer-events: all;
+    stroke-width: 1px;
+  }
+
+  h5 {
+    @include font(700, 24px, 32px, none);
+  }
+}
+
+//account__create-new-address-or-edit-current
+.account__address-form {
+  label {
+    position: relative;
+  }
+}
+
+.icon-chevrone-down--account-address {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  stroke: getColor('black');
+}

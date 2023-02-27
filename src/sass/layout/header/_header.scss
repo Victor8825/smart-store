@@ -128,6 +128,7 @@ li[data-desk-dropdown-btn]:active > button {
   margin-left: 8px;
   vertical-align: text-bottom;
   pointer-events: none;
+  stroke: getColor('black');
 }
 
 .icon-chevrone-down--only-header {
@@ -424,6 +425,15 @@ li.active .decorative-link--header {
 .burger-search__list--desk {
   display: flex;
   flex-wrap: wrap;
+
+  li {
+    width: 306px;
+    flex: 1 1 auto;
+  }
+}
+
+.burger-search__item {
+  min-width: 306px;
 }
 
 .burger-search__item-wrap {

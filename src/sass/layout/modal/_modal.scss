@@ -2,15 +2,14 @@
   width: 100%;
   z-index: 998;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgba(255, 254, 244, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity $trans-time $cubic, visibility $trans-time $cubic,
-    background-color $trans-time $cubic;
+  transition: opacity $trans-time $cubic, visibility $trans-time $cubic, background-color $trans-time $cubic;
 }
 
 .modal {
@@ -32,8 +31,7 @@
 
   // box-shadow: 0 28px 42px rgba(0, 0, 0, 0.38), 0 20px 20px rgba(0, 0, 0, 0.33);
 
-  transition: transform 600ms $cubic, opacity 600ms $cubic,
-    visibility 800ms $cubic, box-shadow 600ms $cubic;
+  transition: transform 600ms $cubic, opacity 600ms $cubic, visibility 800ms $cubic, box-shadow 600ms $cubic;
 
   @include desk {
     width: 416px;
@@ -61,18 +59,23 @@
   width: 100%;
 }
 
-.modal_close-btn {
-  padding: 10px;
-  width: 200px;
-  font-size: 1.1em;
-  background: #0e1012;
-  color: white;
-  // border: 1px solid #0e1012;
-  cursor: pointer;
+.modal-btn {
+  @extend .btn;
   @include font(500, 16px, 16px, none);
+  padding: 10px;
+  border: 1px solid getColor('gray-border');
+  width: 100%;
+  transition: all $trans-time $cubic;
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.7);
+  @include desk {
+    width: auto;
+    display: inline-block;
+    // margin-right: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor('black');
   }
 }
 
