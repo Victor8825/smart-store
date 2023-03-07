@@ -1,0 +1,436 @@
+//timer
+.timer-wrap {
+  background-color: getColor('yellow-bg');
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid getColor('black');
+
+  p {
+    @include font(700, 16px, 24px, none);
+  }
+
+  span {
+    margin-left: 24px;
+    @include font(700, 22px, 30px, none);
+  }
+
+  @include desk {
+    padding: 27px 0;
+
+    p {
+      @include font(700, 18px, 26px, none);
+    }
+
+    span {
+      @include font(700, 24px, 32px, none);
+    }
+  }
+}
+//order section
+.payflow-order-wrap {
+  border-bottom: 1px solid getColor('black');
+  padding: 12px 16px;
+
+  @include desk {
+    border-bottom: none;
+    padding: 40px;
+    border: 1px solid getColor('black');
+    order: 1;
+    align-self: baseline;
+    margin-bottom: 32px;
+  }
+
+  @include tab-desk {
+    margin-bottom: 0;
+    min-width: 480px;
+    width: 40%;
+  }
+}
+
+.payflow-order__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    @include font(500, 16px, 24px, none);
+  }
+
+  span {
+    @include font(700, 16px, 24px, none);
+  }
+
+  span.payflow-order_header-span--desk {
+    display: none;
+  }
+
+  p.payflow-order_header-title--desk {
+    display: none;
+  }
+
+  svg {
+    stroke: getColor('black');
+    margin-left: 12px;
+    vertical-align: text-bottom;
+    transition: transform $trans-time $cubic;
+  }
+
+  @include desk {
+    p {
+      display: none;
+    }
+
+    p.payflow-order_header-title--desk {
+      display: block;
+      @include font(700, 24px, 24px, none);
+    }
+
+    span {
+      display: none;
+    }
+
+    span.payflow-order_header-span--desk {
+      display: block;
+      @include font(500, 16px, 16px, none);
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+.payflow-order-wrap.active {
+  .payflow-order__header svg {
+    transform: rotate(-180deg);
+  }
+
+  .payflow-order__main {
+    @include till_desk {
+      display: block;
+    }
+  }
+}
+
+.payflow-order__main {
+  display: none;
+
+  span {
+    @include font(700, 18px, 26px, none);
+  }
+
+  @include desk {
+    display: block;
+  }
+}
+
+.payflow-order__main-img {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid getColor('black');
+  padding: 24px 0;
+
+  @include desk {
+    padding: 32px 0;
+  }
+
+  img {
+    width: 105px;
+    height: 150px;
+    margin-right: 16px;
+  }
+
+  span {
+    margin-left: auto;
+  }
+
+  p {
+    @include font(700, 16px, 24px, none);
+  }
+}
+
+.payflow-order__main-delivery {
+  padding: 24px 0;
+  border-bottom: 1px solid getColor('black');
+
+  @include desk {
+    padding: 32px 0;
+  }
+  p {
+    @include font(700, 16px, 24px, none);
+  }
+
+  svg {
+    stroke: getColor('gray-icon');
+    vertical-align: text-bottom;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.payflow-order__main-total-amount {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    @include font(700, 22px, 30px, none);
+  }
+
+  @include desk {
+    padding-top: 32px;
+
+    p {
+      @include font(700, 24px, 32px, none);
+    }
+  }
+}
+
+.payflow-section-wrap {
+  @include desk {
+    padding: 40px 72px 80px;
+  }
+
+  @include tab-desk {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+//credentials
+
+.payflow-credentials__wrap {
+  padding: 24px 16px 60px;
+  input {
+    font-family: $secondaryFont;
+    @extend .form-input;
+    width: 100%;
+  }
+
+  h4 {
+    @include font(700, 22px, 30px, none);
+    margin-bottom: 24px;
+  }
+
+  h4:not(:first-child) {
+    margin-top: 32px;
+  }
+
+  @include desk {
+    padding: 0;
+
+    h4 {
+      @include font(700, 32px, 40px, none);
+      margin-bottom: 32px;
+    }
+
+    h4:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  @include tab-desk {
+    flex: 1 1 60%;
+  }
+}
+//credentials contacts
+.payflow-credentials__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+
+  @include desk {
+    flex-direction: row;
+
+    input {
+      flex: 1 1 50%;
+    }
+  }
+}
+//credentials delivery way
+.payflow-credentials__delivery-way {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  label {
+    @extend .form-input;
+    font-family: $secondaryFont;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid getColor('gray-icon');
+    border-radius: 50%;
+  }
+
+  label input[type='radio']:checked ~ span {
+    position: relative;
+    border: none;
+
+    &::before {
+      content: url('../img/icons/radiobutton.svg');
+    }
+  }
+}
+
+.icon-truck {
+  stroke: getColor('gray-icon');
+  fill: none;
+}
+
+.icon-shop {
+  stroke: getColor('gray-icon');
+  fill: none;
+}
+
+.payflow-credentials__delivery-way input:checked ~ svg {
+  stroke: getColor('black');
+}
+//credentials delivery address
+
+.payflow-credentials__delivery-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  label {
+    position: relative;
+    width: 100%;
+
+    svg {
+      transition: transform $trans-time $cubic;
+    }
+  }
+
+  label.active {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include desk {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    label:not(:first-child) {
+      width: calc(50% - 12px);
+    }
+  }
+}
+
+//payflow-credentials__self-drop-address
+.payflow-credentials__self-drop-address {
+  label {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    @extend .form-input;
+    @include font(400, 14px, 20px, none);
+    font-family: $secondaryFont;
+
+    & > span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: 1px solid getColor('gray-icon');
+      border-radius: 50%;
+    }
+
+    // input {
+    //   width: auto;
+    // }
+  }
+
+  label input[type='radio']:checked + span {
+    position: relative;
+    border: none;
+
+    &::before {
+      content: url('../img/icons/radiobutton.svg');
+    }
+  }
+
+  div > span {
+    @include font(700, 16px, 24px, none);
+    font-family: $primaryFont;
+  }
+}
+
+//dropdown menu
+.payflow-credentials__dropdown-list {
+  @extend .input-dropdown__list;
+  width: 100%;
+  top: 53px;
+}
+
+.payflow-credentials__dropdown-item {
+  @extend .input-dropdown__item;
+}
+
+//credentials buttons
+.payflow-credentials__btn-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+
+  & .payflow-credentials__btn-return {
+    border: 1px solid getColor('gray-icon');
+  }
+
+  button {
+    @extend .btn;
+    padding: 16px 16px;
+    width: 100%;
+    min-width: 343px;
+
+    @include desk {
+      width: auto;
+      min-width: auto;
+    }
+  }
+
+  & .payflow-credentials__btn-pay {
+    color: getColor('white');
+    background-color: black;
+    opacity: 0.5;
+
+    @include desk {
+      order: 1;
+    }
+  }
+
+  @include desk {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}
+
+.payflow-credentials__btn-pay {
+  color: getColor('white');
+  background-color: black;
+}

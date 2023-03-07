@@ -29,6 +29,18 @@
   }
 }
 
+@mixin till_tab {
+  @media screen and (max-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin tab-desk {
+  @media screen and (min-width: 1080px) {
+    @content;
+  }
+}
+
 @mixin retina {
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -63,23 +75,16 @@
     //Только если меньше контейнера
     #{$property}: $startSize + px;
     @media (max-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} *
-          ((100vw - 768px) / #{$maxWidthContainer - 768})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 768px) / #{$maxWidthContainer - 768}));
     }
   } @else if $type == 2 {
     //ТОлько если больше контейнера
     #{$property}: $startSize + px;
     @media (min-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} * ((100vw - 768px) / #{$maxWidth - 768})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 768px) / #{$maxWidth - 768}));
     }
   } @else {
     //Всегда
-    #{$property}: calc(
-      #{$minSize + px} + #{$addSize} * ((100vw - 768px) / #{$maxWidth - 768})
-    );
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 768px) / #{$maxWidth - 768}));
   }
 }

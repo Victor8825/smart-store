@@ -20,22 +20,21 @@
     </button>
     <!--account__categories-dropdowm-menu-->
     <ul class="account__categories-dropdown-menu">
-      <li data-account-category-button="privacy-settings">
-        <a class="account__category-link active" href="#">Мій кабінет</a>
+      <li>
+        <a data-account-category-button="privacy-settings" class="account__category-link active" href="#"
+          >Мій кабінет</a
+        >
       </li>
-      <li data-account-category-button="my-orders"><a class="account__category-link" href="#">Мої замовлення</a></li>
-      <li data-account-category-button="my-orders-history">
-        <a class="account__category-link" href="#">Історія покупок</a>
-      </li>
-      <li data-account-category-button="address-form"><a class="account__category-link" href="#">Адреси</a></li>
-      <li data-account-category-button="address-form">
+      <li><a data-account-category-button="my-orders" class="account__category-link" href="#">Мої замовлення</a></li>
+      <li><a data-account-category-button="address-form" class="account__category-link" href="#">Адреси</a></li>
+      <li>
         <a class="account__category-link" href="#">Вийти з акаунту</a>
       </li>
     </ul>
   </div>
   <div class="account__content-wrap">
     <!--account__notification-->
-    <div class="account__notification">
+    <div class="account__notification visually-hidden">
       <svg width="16" height="16">
         <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
       </svg>
@@ -62,14 +61,8 @@
       </div>
     </form>
     <!--account__my-orders-->
-    <!-- <div class="account__notification account__notification--my-orders">
-      <svg width="16" height="16">
-        <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
-      </svg>
-      <p>Ви не розміщували у нас жодних замовлень. Коли ви це зробите, їхній статус з’явиться на цій сторінці.</p>
-    </div> -->
-    <p class="account__orders-history-label">* за остані 3 місяця</p>
-    <ul data-account-category="my-orders" class="account__my-orders-list">
+    <p class="account__orders-history-label visually-hidden">* за остані 3 місяця</p>
+    <ul data-account-category="my-orders" class="account__my-orders-list visually-hidden">
       <li class="account__my-orders-item active">
         <div class="account__my-orders-img-info-wrap">
           <img src="./img/dress.png" alt="" />
@@ -124,7 +117,7 @@
       </li>
     </ul>
     <!--account__my-orders-table-->
-    <table data-account-category="my-orders" class="account__my-orders-table">
+    <table data-account-category="my-orders" class="account__my-orders-table visually-hidden">
       <thead>
         <tr>
           <td>Замовлення</td>
@@ -159,58 +152,8 @@
         </tr>
       </tbody>
     </table>
-    <!--account__orders-history-->
-    <!-- <div class="account__notification account__notification--orders-history">
-      <svg width="16" height="16">
-        <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
-      </svg>
-      <p>Історія буде відображатися як тільки Ви зробите першу покупку на сайті.</p>
-    </div> -->
-
-    <ul data-account-category="my-orders-history" class="account__my-orders-list account__orders-history-list">
-      <li class="account__my-orders-item">
-        <div class="account__my-orders-img-info-wrap">
-          <img src="./img/dress.png" alt="" />
-          <div class="account__my-orders-info-thumb">
-            <div class="account__svg-container">
-              <p>#563758395</p>
-              <svg width="32" height="32">
-                <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
-              </svg>
-            </div>
-            <h5>Кардиган PRETTYLITTLETHING</h5>
-            <span>275 грн.</span>
-          </div>
-        </div>
-        <ul class="account__my-orders-details-wrap">
-          <li>
-            <p>Дата: <span>19.05.2022</span></p>
-          </li>
-        </ul>
-      </li>
-      <li class="account__my-orders-item">
-        <div class="account__my-orders-img-info-wrap">
-          <img src="./img/dress.png" alt="" />
-          <div class="account__my-orders-info-thumb">
-            <div class="account__svg-container">
-              <p>#563758395</p>
-              <svg width="32" height="32">
-                <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
-              </svg>
-            </div>
-            <h5>Кардиган PRETTYLITTLETHING</h5>
-            <span>275 грн.</span>
-          </div>
-        </div>
-        <ul class="account__my-orders-details-wrap visually-hidden">
-          <li>
-            <p>Дата: <span>19.05.2022</span></p>
-          </li>
-        </ul>
-      </li>
-    </ul>
     <!--account__address-list-->
-    <ul data-account-category="my-orders-history" class="account__address-list">
+    <ul data-account-category="address-form" class="account__address-list visually-hidden">
       <li class="account__address-fullfilled-card">
         <h5>Василь Степаненко</h5>
         <ul class="account_address-fullfilled-card-info-wrap">
@@ -235,14 +178,16 @@
         <button account-edit-address-btn="submit">Редагувати</button>
       </li>
       <li class="account__address-empty-card">
-        <svg width="80" height="80">
-          <use href="./img/icons/symbol-defs-optimized.svg#icon-plus"></use>
-        </svg>
-        <h5>Додати адресу</h5>
+        <a href="#">
+          <svg width="80" height="80">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-plus"></use>
+          </svg>
+          <h5>Додати адресу</h5>
+        </a>
       </li>
     </ul>
     <!--account__create-new-address-or-edit-current-->
-    <form data-account-category="address-form" action="" class="account__privacy-settings-form account__address-form">
+    <form data-account-category action="" class="account__privacy-settings-form account__address-form visually-hidden">
       <div class="account__privacy-settings-form-input-wrap">
         <label
           >Імʼя <span>*</span
@@ -281,7 +226,7 @@
           <svg class="icon-chevrone-down--account-address" width="24" height="24">
             <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
           </svg>
-          <ul class="input-dropdown__list">
+          <ul class="input-dropdown__list visually-hidden">
             <li class="input-dropdown__item">Dropdown 1</li>
             <li class="input-dropdown__item">Dropdown 2</li>
             <li class="input-dropdown__item">Dropdown 3</li>

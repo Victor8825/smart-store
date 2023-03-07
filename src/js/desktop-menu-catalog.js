@@ -12,7 +12,7 @@ const deskDropdownChevronIconsArray = Array.from(sectionHeader.querySelectorAll(
 const deskDropdownCatalogItemsArray = Array.from(sectionHeader.querySelectorAll('li[data-catalog-item]'));
 
 sectionHeader &&
-  document.addEventListener('click', e => {
+  sectionHeader.addEventListener('click', e => {
     if (e.target.nodeName !== 'A') {
       e.preventDefault();
     }

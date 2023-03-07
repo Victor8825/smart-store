@@ -1,28 +1,10 @@
 // import Swiper bundle with all modules installed
-import Swiper, {
-  Navigation,
-  Pagination,
-  Autoplay,
-  Lazy,
-  Scrollbar,
-  Zoom,
-  Mousewheel,
-  Keyboard,
-} from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, Lazy, Scrollbar, Zoom, Mousewheel, Keyboard } from 'swiper';
 
 import 'swiper/swiper-bundle.min.css';
 
 const swiper = new Swiper('.image-slider', {
-  modules: [
-    Navigation,
-    Pagination,
-    Zoom,
-    Lazy,
-    Autoplay,
-    Scrollbar,
-    Mousewheel,
-    Keyboard,
-  ],
+  modules: [Navigation, Pagination, Zoom, Lazy, Autoplay, Scrollbar, Mousewheel, Keyboard],
 
   // Optional parameters
   // autoHeight: true,
@@ -38,10 +20,10 @@ const swiper = new Swiper('.image-slider', {
     pageUpDown: true,
   },
   //mouseWheel
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: '.image-slider',
-  },
+  // mousewheel: {
+  //   sensitivity: 1,
+  //   eventsTarget: '.image-slider',
+  // },
   //zoom
   zoom: {
     maxRatio: 2,
@@ -49,11 +31,11 @@ const swiper = new Swiper('.image-slider', {
   },
 
   //autoPLay
-  // autoplay: {
-  //   delay: 3000,
-  //   pauseOnMouseEnter: true,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
 
   // If we need pagination
   pagination: {

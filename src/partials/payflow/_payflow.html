@@ -1,0 +1,146 @@
+<section class="payflow responsive-container">
+  <div class="timer-wrap">
+    <p>
+      Таймер бронювання:
+      <span class="timer-data">10:00</span>
+    </p>
+  </div>
+  <div class="payflow-section-wrap">
+    <div class="payflow-order-wrap">
+      <div class="payflow-order__header">
+        <p class="payflow-order__open-close">
+          Показати Ваше замовлення
+          <svg width="16" height="16">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+        </p>
+        <p class="payflow-order_header-title--desk">Ваше замовлення</p>
+        <span>275 грн.</span>
+      </div>
+      <div class="payflow-order__main">
+        <div class="payflow-order__main-img">
+          <img src="./img/dress.png" alt="" />
+          <p>Кардиган PRETTYLITTLETHING</p>
+          <span>275 грн.</span>
+        </div>
+        <ul class="payflow-order__main-delivery">
+          <li>
+            <p>Проміжний підсумок</p>
+            <span>275 грн.</span>
+          </li>
+          <li>
+            <p>
+              Доставка
+              <svg width="16" height="16">
+                <use href="./img/icons/symbol-defs-optimized.svg#icon-info"></use>
+              </svg>
+            </p>
+            <span>----</span>
+          </li>
+        </ul>
+        <div class="payflow-order__main-total-amount">
+          <p>Усього:</p>
+          <span>275 грн.</span>
+        </div>
+      </div>
+    </div>
+    <form class="payflow-credentials__wrap">
+      <h4>Ваші дані</h4>
+      <div action="" class="payflow-credentials__contacts">
+        <input type="text" value="info@gmail.com" readonly />
+        <input type="text" value="+380 (50) 555 94 15" readonly />
+      </div>
+      <h4>Спосіб доставки</h4>
+      <div action="" class="payflow-credentials__delivery-way">
+        <label>
+          <input type="radio" name="delivery" value="post" hidden checked />
+          <span></span>
+          <svg class="icon-truck" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-truck"></use>
+          </svg>
+          Доставка Новою поштою
+        </label>
+        <label>
+          <input type="radio" name="delivery" value="self-drop" hidden />
+          <span></span>
+          <svg class="icon-shop" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-shop"></use>
+          </svg>
+          Самовивіз
+        </label>
+      </div>
+      <div action="" class="payflow-credentials__delivery-address visually-hidden">
+        <label
+          ><input data-dropdown-btn type="text" placeholder="Збережені адреси" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+          <ul class="payflow-credentials__dropdown-list visually-hidden">
+            <li class="payflow-credentials__dropdown-item">Address 1</li>
+            <li class="payflow-credentials__dropdown-item">Address 2</li>
+            <li class="payflow-credentials__dropdown-item">Address 3</li>
+            <li class="payflow-credentials__dropdown-item">Address 4</li>
+            <li class="payflow-credentials__dropdown-item">Address 5</li>
+            <li class="payflow-credentials__dropdown-item">Address 6</li>
+          </ul>
+        </label>
+        <label><input type="text" placeholder="Імʼя" /></label>
+        <label><input type="text" placeholder="Прізвище" /></label>
+        <label><input type="text" placeholder="Телефон" /></label>
+        <label
+          ><input data-dropdown-btn type="text" placeholder="Область" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+          <ul class="payflow-credentials__dropdown-list visually-hidden">
+            <li class="payflow-credentials__dropdown-item">District 1</li>
+            <li class="payflow-credentials__dropdown-item">District 2</li>
+            <li class="payflow-credentials__dropdown-item">District 3</li>
+            <li class="payflow-credentials__dropdown-item">District 4</li>
+            <li class="payflow-credentials__dropdown-item">District 5</li>
+          </ul>
+        </label>
+        <label
+          ><input data-dropdown-btn type="text" placeholder="Населенний пункт" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+          <ul class="payflow-credentials__dropdown-list visually-hidden">
+            <li class="payflow-credentials__dropdown-item">City 1</li>
+            <li class="payflow-credentials__dropdown-item">City 2</li>
+            <li class="payflow-credentials__dropdown-item">City 3</li>
+            <li class="payflow-credentials__dropdown-item">City 4</li>
+            <li class="payflow-credentials__dropdown-item">City 5</li>
+          </ul>
+        </label>
+        <label
+          ><input data-dropdown-btn type="text" placeholder="Відділення НП" />
+          <svg class="icon-chevrone-down--account-address" width="24" height="24">
+            <use href="./img/icons/symbol-defs-optimized.svg#icon-chevrone-down"></use>
+          </svg>
+          <ul class="payflow-credentials__dropdown-list visually-hidden">
+            <li class="payflow-credentials__dropdown-item">Dropdown 1</li>
+            <li class="payflow-credentials__dropdown-item">Dropdown 2</li>
+            <li class="payflow-credentials__dropdown-item">Dropdown 3</li>
+            <li class="payflow-credentials__dropdown-item">Dropdown 4</li>
+            <li class="payflow-credentials__dropdown-item">Dropdown 5</li>
+          </ul>
+        </label>
+      </div>
+      <div action="" class="payflow-credentials__self-drop-address visually-hidden">
+        <label>
+          <input type="radio" name="self-drop-address" value="self-drop-address" hidden checked />
+          <span></span>
+          <div>
+            <span>Smart Store</span>
+            <p>м. Кропивницький, вул. Велика Перспективна, 27</p>
+          </div>
+        </label>
+      </div>
+      <div class="payflow-credentials__btn-wrap">
+        <button class="payflow-credentials__btn-pay" type="button">Сплатити</button>
+        <button class="payflow-credentials__btn-return" type="button">Повернутись до товару</button>
+      </div>
+    </form>
+  </div>
+</section>

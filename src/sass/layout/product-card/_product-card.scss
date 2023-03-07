@@ -48,13 +48,17 @@
     grid-area: item;
     display: grid;
     grid-template-columns: minmax(526px, 1fr) 1fr;
-    // grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto) 1fr;
     grid-template-areas:
       'image-slider item__info'
       'image-slider item__buy-btn'
       'image-slider item__details';
     column-gap: 134px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1000px) {
+    grid-template-columns: minmax(400px, 1fr) 1fr;
+    column-gap: 50px;
   }
 }
 
