@@ -1,10 +1,9 @@
 //timer
 const payflowSectionRef = document.querySelector('.payflow');
 
-let minute = 0;
-let second = 20;
-
 if (payflowSectionRef) {
+  let minute = 10;
+  let second = 00;
   const countDownTimer = setInterval(() => {
     second--;
     if (second < 0) {
@@ -14,7 +13,7 @@ if (payflowSectionRef) {
     payflowSectionRef.querySelector('.timer-data').innerHTML = `${minute < 10 ? '0' + minute : minute}:${
       second < 10 ? '0' + second : second
     }`;
-    if (minute == 0 && second == 0) clearInterval(countDownTimer);
+    if (minute === 0 && second === 0) clearInterval(countDownTimer);
   }, 1000);
 }
 

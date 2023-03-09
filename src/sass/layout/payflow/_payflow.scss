@@ -178,6 +178,45 @@
   }
 }
 
+.payflow-order__main-delivery-text {
+  position: relative;
+
+  & .payflow-order__main-delivery-notification {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all $trans-time $cubic;
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+    top: -50%;
+    left: 120%;
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: getColor('gray-border');
+    font-family: $secondaryFont;
+    @include font(400, 16px, 16px, none);
+  }
+
+  & .payflow-order__main-delivery-notification::before {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: getColor('gray-border');
+    padding: 5px;
+    z-index: 1;
+    top: 50%;
+    left: -2%;
+  }
+}
+
+.payflow-order__main-delivery-text:hover .payflow-order__main-delivery-notification {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .payflow-order__main-total-amount {
   padding-top: 24px;
   display: flex;
