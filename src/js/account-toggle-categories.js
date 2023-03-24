@@ -1,10 +1,17 @@
 //open account partials when clicking on account__categories-dropdown-menu link
 const accountCategoryMenu = document.querySelector('.account__categories-dropdown-menu');
 const accountCategoriesArray = document.querySelectorAll('[data-account-category]');
+const accountSectionRef = document.querySelector('.account');
+const servicesSectionRef = document.querySelector('.services');
 
 accountCategoryMenu &&
   accountCategoryMenu.addEventListener('click', e => {
-    e.preventDefault();
+    console.log(e.target.nodeName);
+
+    if (e.target.nodeName !== 'A') {
+      e.preventDefault();
+    }
+    // e.preventDefault();
     const currentCategoryButton = e.target;
 
     document.querySelectorAll('[data-account-category-button]').forEach(categoryButton => {
@@ -21,9 +28,24 @@ accountCategoryMenu &&
         }
       });
 
-      document.querySelector('.account__choose-categories-btn').textContent = `Акаунт: ${e.target.textContent}`;
+      if (accountSectionRef) {
+        const btnRef = document.querySelector('.account__choose-categories-btn > span');
+        const textToInsert = `Акаунт: ${e.target.textContent}`;
+        changeBtnTextContent(btnRef, textToInsert);
+      }
+
+      if (servicesSectionRef) {
+        const btnRef = document.querySelector('.account__choose-categories-btn > span');
+        const textToInsert = `Сервіси: ${e.target.textContent}`;
+        changeBtnTextContent(btnRef, textToInsert);
+      }
     });
   });
+
+//change textContent of the button
+function changeBtnTextContent(btnRef, textToInsert) {
+  btnRef.textContent = `${textToInsert}`;
+}
 
 //create new address
 document.querySelector('.account__address-empty-card') &&

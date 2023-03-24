@@ -38,11 +38,16 @@
   border-top: 1px solid getColor('gray-border');
   border-bottom: 1px solid getColor('gray-border');
   position: relative;
+
   svg {
     margin-left: 12px;
     transition: all $trans-time $cubic;
     stroke: getColor('black');
     stroke-width: 2px;
+  }
+
+  span {
+    pointer-events: none;
   }
 
   @include desk {

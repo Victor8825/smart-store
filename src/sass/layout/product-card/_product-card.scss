@@ -237,9 +237,9 @@
     @include font(700, 16px, 24px, none);
   }
 
-  p {
-    color: getColor('gray-body');
-  }
+  // p {
+  //   color: getColor('black');
+  // }
 
   @include desk {
     grid-area: item__details;
@@ -249,9 +249,14 @@
 .item__btn {
   @extend .btn;
   padding: 16px 0;
-  color: getColor('gray-header');
+  color: getColor('black');
   justify-content: space-between;
   width: 100%;
+
+  p {
+    flex-shrink: 6;
+    text-align: left;
+  }
 }
 
 .dropdown-btn--product-active {
@@ -277,6 +282,10 @@
 .item__details-wrap {
   border-top: 1px solid #0e1012;
   position: relative;
+
+  p {
+    pointer-events: none;
+  }
 }
 
 .item__details-menu {
@@ -284,6 +293,7 @@
   position: static;
   opacity: 0;
   display: none;
+  color: getColor('gray-body');
 
   li {
     display: flex;

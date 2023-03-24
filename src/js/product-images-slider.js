@@ -64,6 +64,42 @@ const swiper = new Swiper('.image-slider', {
 });
 
 // swiper.init();
-swiper.on('init', function () {
-  swiper.autoplay.start();
+// swiper.on('init', function () {
+//   swiper.autoplay.start();
+// });
+
+//service about swiper instance
+const swiperService = new Swiper('.service__about-swiper', {
+  modules: [Navigation, Pagination, Zoom, Lazy, Autoplay, Scrollbar, Mousewheel, Keyboard],
+
+  // Optional parameters
+  // autoHeight: true,
+  observer: true,
+  loop: true,
+  grabCursor: true,
+  watchOverflow: true,
+  spaceBetween: 3,
+  //Keyboard
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  // autoPLay
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.service__swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+
+    // Navigation arrows
+  },
 });

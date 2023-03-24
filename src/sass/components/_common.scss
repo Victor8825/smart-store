@@ -14,7 +14,7 @@
   min-width: $minWidthContainer;
 
   @include desk {
-    max-width: $maxWidthContainer;
+    //max-width: $maxWidthContainer;
     // min-width: 1000px;
   }
 }
@@ -69,4 +69,35 @@
     left: 0;
     width: 100%;
   }
+}
+
+hr {
+  width: 100%;
+}
+
+.section--padding {
+  padding: 0px 16px;
+  @include desk {
+    padding: 0px 72px;
+  }
+}
+
+//for making active all the card where the link is present inside, parent of the link must have position:relative
+.link::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+}
+
+//for adding outline for the card, but previously we delete native outline. Fot this we style out link, which is inside the card, because link::before wrapes all the card
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus-visible::before {
+  outline: 5px solid deepskyblue;
+  outline-offset: -5px;
 }

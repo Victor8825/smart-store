@@ -77,14 +77,14 @@ const showHeaderCatalogTypes = e => {
 
 const createCategoryTypesHTML = category => {
   types = [
-    { name: '11111111111', id: 1 },
-    { name: 'sfgs2222fdg', id: 2 },
-    { name: 'dsdd3333333hfdf', id: 3 },
-    { name: 'e44444tyet', id: 4 },
-    { name: 'dsd5555srtwretwrfdf', id: 5 },
-    { name: 'sfgsh666trdtfdg', id: 6 },
-    { name: 'dsddh777dwertwertrthfdf', id: 7 },
-    { name: 'et88888ysfgset', id: 8 },
+    { name: 'shoes', id: 1 },
+    { name: 't-shirts', id: 2 },
+    { name: 'outfit', id: 3 },
+    { name: 'blouse', id: 4 },
+    { name: 'jackets', id: 5 },
+    { name: 'pant/shorts', id: 6 },
+    { name: 'fleece', id: 7 },
+    { name: 'accessories', id: 8 },
   ];
   return types.map(t => `<li><a class="decorative-link--header" href="#${t.id}">${t.name}</a></li>`).join('');
 };
