@@ -3,7 +3,7 @@ const payflowSectionRef = document.querySelector('.payflow');
 
 if (payflowSectionRef) {
   let minute = 10;
-  let second = 00;
+  let second = 0;
   const countDownTimer = setInterval(() => {
     second--;
     if (second < 0) {
