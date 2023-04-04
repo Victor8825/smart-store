@@ -5,8 +5,17 @@
     @include font(700, 48px, 60px, none);
   }
 
+  h2 {
+    @include font(700, 28px, 36px, none);
+  }
+
   h3 {
     @include font(700, 28px, 36px, none);
+  }
+
+  p {
+    font-family: $secondaryFont;
+    @include font(400, 16px, 24px, none);
   }
 
   @include desk {
@@ -16,22 +25,44 @@
       @include font(700, 120px, 132px, none);
     }
 
+    h2 {
+      @include font(700, 48px, 60px, none);
+    }
+
     h3 {
       @include font(700, 32px, 40px, none);
+    }
+
+    p {
+      @include font(400, 18px, 26px, none);
     }
   }
 }
 //landing header
-.landing__header {
+.landing-header {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include desk {
+    display: grid;
+    grid:
+      'landing-header__h1 landing-header__link-wrap' auto
+      'landing-header__btn landing-header__btn' auto
+      'landing-header__h3 landing-header__text' auto
+      'landing-header__image landing-header__image' auto
+      / 1fr auto;
+    justify-content: space-between;
+    gap: 40px 60px;
+  }
+
+  @include tab-desk {
+    gap: 40px 234px;
+  }
 }
 
-.landing__header-link-wrap {
+.landing-header__link-wrap {
   align-self: flex-end;
-  flex: 1 1 auto;
-
   display: flex;
   gap: 16px;
   align-items: center;
@@ -39,15 +70,16 @@
   width: 100%;
 
   @include desk {
-    width: 100%;
     max-width: 304px;
+    grid-area: landing-header__link-wrap;
+    align-self: center;
   }
 }
 
-.landing__header-link {
+.landing-header__link {
   font-family: $secondaryFont;
   color: getColor('gray-header');
-  flex: 1 1 auto;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -58,44 +90,474 @@
   }
 }
 
-.landing__header-link::after {
+.landing-header__link::after {
   content: '';
-  flex: 1 1 auto;
+  flex-grow: 1;
   border-bottom: 1px solid getColor('black');
 }
 
-.landing__header-btn {
+.landing-header__h1 {
+  @include desk {
+    grid-area: landing-header__h1;
+    justify-self: stretch;
+  }
+}
+
+.landing-header__btn {
   @extend .btn;
   @include font(500, 16px, 24px, none);
   background-color: getColor('black');
   color: getColor('white');
   padding: 10px 16px;
   align-self: self-start;
+  flex-grow: 0;
+
   @include desk {
     padding: 16px;
+    grid-area: landing-header__btn;
+    justify-self: start;
   }
 }
 
-.landing__header-text {
-}
-
-.landing__header-h3 {
+.landing-header__h3 {
   align-self: flex-start;
-  text-align: end;
+  text-align: start;
+
+  display: flex;
+  flex-direction: column;
+
+  @include desk {
+    grid-area: landing-header__h3;
+    justify-self: start;
+  }
+
+  @include tab-desk {
+    justify-self: end;
+  }
 }
 
-.landing__header-h3 span {
+.landing-header__h3 > span {
+  text-align: right;
   @include font(700, 28px, 36px, none);
-
-  :nth-child(even) {
-    text-align: start;
-  }
 
   @include desk {
     @include font(700, 32px, 40px, none);
   }
 }
 
-.landing__header-h3:last-child {
-  text-align: start;
+.landing-header__text {
+  align-self: flex-end;
+  max-width: 161px;
+  width: 100%;
+
+  @include desk {
+    max-width: 304px;
+    grid-area: landing-header__text;
+    align-self: center;
+  }
+}
+
+.landing-header__image {
+  height: 320px;
+  background-image: url('../img/landing/landing-bg-mob-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 16px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../img/landing/landing-bg-mob-2x.jpg');
+  }
+
+  @include desk {
+    grid-area: landing-header__image;
+    height: 600px;
+    background-image: url('../img/landing/landing-bg-desk1-1x.jpg'), url('../img/landing/landing-bg-desk2-1x.jpg');
+    background-size: 50% 100%, 50% 100%;
+    background-position: top left, top right;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../img/landing/landing-bg-desk1-2x.jpg'), url('../img/landing/landing-bg-desk2-2x.jpg');
+    }
+  }
+}
+
+//landing new drop
+.landing-new-drop {
+  padding-top: 60px;
+
+  @include desk {
+    padding-top: 120px;
+    position: relative;
+  }
+}
+
+.landing-new-drop__btn-wrap {
+  display: flex;
+  gap: 12px;
+}
+
+.landing-new-drop__btn-plus-swiper-navigation-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-new-drop-btn {
+  @extend .btn;
+  padding: 8px 24px;
+  @include font(700, 18px, 26px, null);
+  background-color: getColor('black');
+  color: getColor('white');
+}
+
+.landing-sales-btn {
+  @extend .btn;
+  padding: 8px 24px;
+  font-family: $secondaryFont;
+  @include font(400, 18px, 26px, null);
+  background-color: getColor('white');
+  color: getColor('black');
+  border: 1px solid getColor('white');
+  transition: all $trans-time $cubic;
+
+  &:hover {
+    border: 1px solid getColor('black');
+  }
+}
+
+//landing-new-drop__swiper
+.landing-new-drop__swiper-thumb {
+  padding: 40px 0;
+
+  @include desk {
+    padding: 60px 0;
+  }
+}
+
+.landing-new-drop__swiper-navigation-thumb {
+  display: none;
+
+  @include desk {
+    display: flex;
+    pointer-events: all;
+    gap: 60px;
+
+    svg {
+      pointer-events: all;
+      stroke: currentColor;
+      stroke-width: 1px;
+      cursor: pointer;
+    }
+  }
+}
+
+.landing .marquee {
+  margin-bottom: 60px;
+
+  @include desk {
+    margin-bottom: 120px;
+  }
+}
+
+//landing-new-drop-call
+.landing-new-drop-call {
+  padding: 40px 16px;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid getColor('black');
+  border-bottom: 1px solid getColor('black');
+
+  button {
+    @extend .btn;
+    @include font(500, 16px, 24px, none);
+    padding: 10px 16px;
+    border: 1px solid getColor('black');
+  }
+
+  @include desk {
+    padding: 40px 72px;
+
+    h3 {
+      @include font(700, 48px, 60px, none);
+    }
+
+    button {
+      @include font(500, 18px, 18px, none);
+      padding: 15px 16px;
+      border: 1px solid getColor('black');
+    }
+  }
+}
+
+//landing-catalogue
+.landing-catalogue {
+  padding: 60px 16px;
+
+  h3 {
+    display: flex;
+    gap: 12px;
+  }
+
+  @include desk {
+    padding: 120px 72px;
+
+    .icon-star {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+//landing-catalog__swiper
+.landing-catalogue .swiper-wrapper {
+  @include till_desk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+  }
+}
+.landing-catalog__swiper__navigation-thumb {
+  @extend .landing-new-drop__swiper-navigation-thumb;
+}
+
+.landing-catalog__swiper-navigation-plus-h3-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @include desk {
+    margin-bottom: 60px;
+  }
+}
+
+.catalog__gallery-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 180px;
+    height: auto;
+  }
+
+  a {
+    padding: 10px 16px;
+    flex: 1 1 auto;
+    text-align: center;
+    @include font(500, 16px, 24px, none);
+  }
+
+  @include desk {
+    gap: 32px;
+
+    img {
+      max-height: 320px;
+    }
+
+    a {
+      padding: 15px 16px;
+      @include font(500, 18px, 18px, none);
+    }
+  }
+}
+
+//landing-call-second
+.landing-call-second {
+  padding: 40px 16px;
+  border-top: 1px solid getColor('black');
+  border-bottom: 1px solid getColor('black');
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  @include desk {
+    display: flex;
+    gap: 50px;
+    // justify-content: center;
+    align-items: center;
+  }
+
+  @include tab-desk {
+    padding: 40px 72px;
+    gap: 220px;
+  }
+}
+
+.landing-circle {
+  display: none;
+
+  @include desk {
+    display: block;
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.landing-circle__text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: textCircle 15s linear infinite;
+
+  span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+  }
+}
+
+@keyframes textCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//landing-feedback-form
+.landing-feedback {
+  padding-top: 60px;
+
+  h2 {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  & > p {
+    text-align: center;
+  }
+
+  @include desk {
+    padding-top: 120px;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.landing-fedback__form-wrap {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 343px;
+
+  @include desk {
+    max-width: none;
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 134px;
+  }
+}
+
+.landing-fedback__form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 24px;
+  width: 100%;
+
+  label {
+    display: block;
+
+    span {
+      color: getColor('red');
+    }
+  }
+
+  input {
+    width: 100%;
+    display: block;
+
+    margin-top: 6px;
+  }
+
+  textarea {
+    width: 100%;
+    display: block;
+    margin-top: 6px;
+  }
+
+  button {
+    padding: 12px;
+    background-color: getColor('black');
+    color: getColor('white');
+    margin-top: 32px;
+  }
+
+  @include desk {
+    padding: 40px;
+    border: 1px solid getColor('black');
+    width: auto;
+    max-width: 856px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    label {
+      flex: 1 1 calc(50% - 24px);
+    }
+
+    button {
+      flex: 1 1 100%;
+    }
+  }
+
+  @include small-desk {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.landing-feedback__contacts {
+  width: 100%;
+
+  @include desk {
+    width: auto;
+  }
+}
+
+.landing-feedback__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+
+  svg {
+    stroke-width: 2px;
+  }
+
+  li > p:first-child {
+    margin-bottom: 12px;
+  }
+
+  @include desk {
+    gap: 50px;
+  }
 }

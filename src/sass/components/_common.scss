@@ -83,21 +83,24 @@ hr {
 }
 
 //for making active all the card where the link is present inside, parent of the link must have position:relative
-.link::before {
+
+.card--styled::before {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   content: '';
+  transition: all $trans-time $cubic;
+  // outline: none;
 }
 
-//for adding outline for the card, but previously we delete native outline. Fot this we style out link, which is inside the card, because link::before wrapes all the card
-.link:focus-visible {
+//for adding outline for the card, but previously we delete native outline. Fot this we style the link, which is inside the card, because link::before wrapes all the card
+.card--styled:hover {
   outline: none;
 }
 
-.link:focus-visible::before {
-  outline: 5px solid deepskyblue;
-  outline-offset: -5px;
+.card--styled:hover::before {
+  outline: 3px solid deepskyblue;
+  outline-offset: -3px;
 }

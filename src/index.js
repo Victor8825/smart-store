@@ -20,6 +20,8 @@ import './js/account-toggle-categories';
 
 import './js/payflow';
 
+import './js/landing-round-text';
+
 // import './js/lightbox-for-fullsize-image';
 
 // import './js/all-products-resize';

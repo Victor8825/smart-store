@@ -134,7 +134,7 @@
   min-width: 100%;
   gap: 15px;
   // transform: translateX(100%);
-  //animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 40s linear infinite;
 }
 
 @keyframes marquee-scroll {
@@ -203,13 +203,13 @@
 .service__about-purpose-item-img-wrap {
   max-height: 320px;
 
-  @include desk {
-    max-height: none;
-  }
-
   img {
     height: 100%;
     object-fit: cover;
+  }
+
+  @include desk {
+    max-height: none;
   }
 }
 
