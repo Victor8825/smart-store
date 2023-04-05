@@ -440,7 +440,7 @@
     border: 1px solid getColor('gray-icon');
   }
 
-  button {
+  a {
     @extend .btn;
     padding: 16px 16px;
     width: 100%;

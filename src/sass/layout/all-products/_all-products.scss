@@ -471,19 +471,19 @@
   margin-top: 24px;
   transition: all $trans-time $cubic;
 
-  & button {
+  & a {
     @extend .btn;
     @include font(500, 16px, 24px, none);
     padding: 10px 0;
     width: inherit;
   }
 
-  & button:first-child {
+  & a:first-child {
     background-color: getColor('black');
     color: getColor('white');
   }
 
-  & button:last-child {
+  & a:last-child {
     border: 1px solid #0e1012;
     color: getColor('black');
   }

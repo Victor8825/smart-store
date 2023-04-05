@@ -283,6 +283,7 @@ li.active .decorative-link--header {
 }
 
 .icon-chevrone--burger-menu {
+  stroke: getColor('black');
   transform: rotate(-90deg);
 }
 
@@ -291,6 +292,7 @@ li.active .decorative-link--header {
 }
 
 .icon-chevrone--catalog {
+  stroke: getColor('black');
   pointer-events: all;
   transition: transform $trans-time $cubic;
   margin: 8px;
