@@ -191,12 +191,14 @@ function swiperMode() {
 
 /* On Load
  **************************************************************/
-window.addEventListener('load', function () {
-  swiperMode();
-});
+swiperLandingCatalogInstance &&
+  window.addEventListener('load', function () {
+    swiperMode();
+  });
 
 /* On Resize
  **************************************************************/
-window.addEventListener('resize', function () {
-  swiperMode();
-});
+swiperLandingCatalogInstance &&
+  window.addEventListener('resize', function () {
+    swiperMode();
+  });
